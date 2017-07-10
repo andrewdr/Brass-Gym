@@ -13,14 +13,18 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var noteNameLabel: UILabel!
     @IBOutlet weak var scaleTypeLabel: UILabel!
+    @IBOutlet weak var majSwitchValue: UISwitch!
+
+
 
     
+    
     @IBAction func randomScaleBtn(_ sender: Any) {
-        
         getRandomScale()
-        
     }
     
+    
+    var randomScaleType = 0
     
     func getRandomScale() {
         
@@ -31,16 +35,18 @@ class FirstViewController: UIViewController {
         if randomNote == previousNote {
             randomNote = Int(arc4random_uniform(UInt32(notes.count)))
         }
+        
         noteNameLabel.text = notes[randomNote]
         
-        
-        let randomScaleType = Int(arc4random_uniform(UInt32(scaleType.count)))
-        scaleTypeLabel.text = scaleType[randomScaleType]
-        
-
-    
-    
+        if majSwitchValue.isOn {
+           scaleTypeLabel.text = scaleType[0]
+        }else{
+            randomScaleType = Int(arc4random_uniform(UInt32(scaleType.count)))
+            scaleTypeLabel.text = scaleType[randomScaleType]
+        }
     }
+    
+    
     
     
 

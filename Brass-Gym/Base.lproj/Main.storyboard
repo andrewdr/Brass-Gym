@@ -71,23 +71,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="41c-5Y-Bsu">
+                                <rect key="frame" x="283" y="412" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major Scales Only" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRE-jB-qB6">
+                                <rect key="frame" x="71" y="412" width="196" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="196" id="D5p-9V-mL3"/>
+                                    <constraint firstAttribute="height" constant="31" id="Yl7-IV-Y1U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kfi-82-gxx" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="3CM-hd-MGc"/>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
                             <constraint firstItem="SDy-Pr-C47" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="6sn-rA-sVb"/>
+                            <constraint firstItem="nRE-jB-qB6" firstAttribute="top" secondItem="kfi-82-gxx" secondAttribute="bottom" constant="52" id="CRU-xk-Ep2"/>
                             <constraint firstItem="kfi-82-gxx" firstAttribute="top" secondItem="SDy-Pr-C47" secondAttribute="bottom" constant="72" id="Ffl-zB-HJr"/>
                             <constraint firstItem="SDy-Pr-C47" firstAttribute="top" secondItem="ysC-0c-Ty2" secondAttribute="bottom" constant="3" id="Jnh-l8-amd"/>
                             <constraint firstItem="ONO-tk-SX6" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="27" id="OLN-Ul-gwM"/>
+                            <constraint firstItem="nRE-jB-qB6" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" constant="-18.5" id="QxU-Qc-NBL"/>
                             <constraint firstItem="ysC-0c-Ty2" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Umr-vM-1n9"/>
                             <constraint firstItem="ysC-0c-Ty2" firstAttribute="top" secondItem="ONO-tk-SX6" secondAttribute="bottom" constant="49.5" id="WbJ-hI-nBj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="41c-5Y-Bsu" secondAttribute="trailing" constant="27" id="aTp-h1-ECy"/>
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" constant="284.5" id="exm-UA-ej4"/>
+                            <constraint firstItem="41c-5Y-Bsu" firstAttribute="top" secondItem="kfi-82-gxx" secondAttribute="bottom" constant="52" id="rR2-cv-Qv6"/>
                             <constraint firstItem="ONO-tk-SX6" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="thE-Lc-gKJ"/>
+                            <constraint firstItem="41c-5Y-Bsu" firstAttribute="leading" secondItem="nRE-jB-qB6" secondAttribute="trailing" constant="16" id="wV1-qe-Rwl"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="scales" image="scale-tab-icon2" badgeValue="scales" selectedImage="scale-tab-icon2" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="scales" image="scale-tab-icon2" selectedImage="scale-tab-icon2" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="majSwitchValue" destination="41c-5Y-Bsu" id="DfD-jc-9Sx"/>
                         <outlet property="noteNameLabel" destination="ysC-0c-Ty2" id="Ukp-eb-gU7"/>
                         <outlet property="scaleTypeLabel" destination="SDy-Pr-C47" id="oUU-oJ-Yiq"/>
                     </connections>

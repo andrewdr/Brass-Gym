@@ -12,6 +12,4 @@ let notes:Array = ["A", "A♭", "B", "B♭", "C", "C#", "D", "D♭", "E", "E♭"
 
 let scaleType:Array = ["Major", "Natural Minor", "Harmonic Minor", "Melodic Minor", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Lydian Dominant", "Octatonic(W)", "Octatonic(H)", "Chromatic(up)", "Chromatic(down)", "Whole Tone", "Locrian"]
 
-let levelOne: Array = ["Major", "Chromatic(up)", "Chromatic(down)"]
-let levelTwo: Array = ["Major", "Natural Minor", "Harmonic Minor"]
-let levelThree = scaleType
+let minorScales:Array = ["Natural Minor", "Harmonic Minor", "Melodic Minor"]
