@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -168,16 +169,53 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Old School Only" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKy-zL-KtJ">
+                                <rect key="frame" x="97" y="388" width="180" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="1W7-xW-0qr"/>
+                                    <constraint firstAttribute="height" constant="21" id="HRq-QM-X1B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips Only" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVl-Sa-HXh">
+                                <rect key="frame" x="133.5" y="436" width="107.5" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="K8O-mG-fva">
+                                <rect key="frame" x="285" y="438" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="flipsOnlySwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="3iD-4E-nRy"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TPD-Rd-JRU">
+                                <rect key="frame" x="285" y="383" width="51" height="31"/>
+                                <connections>
+                                    <action selector="osOnlySwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="pPy-Xd-zeP"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pDw-Mq-sjd" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="72" id="6rY-tY-fNi"/>
+                            <constraint firstItem="TPD-Rd-JRU" firstAttribute="leading" secondItem="wKy-zL-KtJ" secondAttribute="trailing" constant="8" id="Bfl-HL-6pu"/>
+                            <constraint firstItem="TPD-Rd-JRU" firstAttribute="top" secondItem="krh-aM-Qge" secondAttribute="bottom" constant="176" id="CYG-Oy-H2Q"/>
                             <constraint firstItem="bLK-QL-5ZY" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Crr-jo-LdW"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="TPD-Rd-JRU" secondAttribute="bottom" constant="204" id="HAM-cZ-ReC"/>
+                            <constraint firstItem="wKy-zL-KtJ" firstAttribute="top" secondItem="bLK-QL-5ZY" secondAttribute="bottom" constant="40" id="KiA-dA-gSg"/>
                             <constraint firstItem="pDw-Mq-sjd" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Kiv-LY-hrh"/>
                             <constraint firstItem="krh-aM-Qge" firstAttribute="top" secondItem="pDw-Mq-sjd" secondAttribute="bottom" constant="8" id="VE2-0s-vLF"/>
+                            <constraint firstItem="wKy-zL-KtJ" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="goU-h2-boe"/>
+                            <constraint firstItem="fVl-Sa-HXh" firstAttribute="top" secondItem="wKy-zL-KtJ" secondAttribute="bottom" constant="27" id="hhe-6k-nFr"/>
+                            <constraint firstItem="fVl-Sa-HXh" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="juS-Q3-2DV"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" constant="2.75" id="qqM-NS-xev"/>
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" constant="284.5" id="qzY-Ky-pLD"/>
                             <constraint firstItem="bLK-QL-5ZY" firstAttribute="top" secondItem="krh-aM-Qge" secondAttribute="bottom" constant="111" id="ubZ-ch-BqD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TPD-Rd-JRU" secondAttribute="trailing" constant="24.5" id="ur7-Pj-qFu"/>
                             <constraint firstItem="fDY-Ki-nw5" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="vQz-JX-gvZ"/>
                             <constraint firstItem="fDY-Ki-nw5" firstAttribute="top" secondItem="krh-aM-Qge" secondAttribute="bottom" constant="8" id="xzY-vB-TKu"/>
                             <constraint firstItem="krh-aM-Qge" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="ztg-ep-RDx"/>

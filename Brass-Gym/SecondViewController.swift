@@ -21,12 +21,32 @@ class SecondViewController: UIViewController {
         getFlexType()
     }
     
+
+    @IBAction func osOnlySwitch(_ sender: UISwitch) {
+        if (sender.isOn) {
+        flexTypeRandom = 0
+        } else{
+        flexTypeRandom = Int(arc4random_uniform(UInt32(flexType.count)))
+        }
+    }
     
+    @IBAction func flipsOnlySwitch(_ sender: UISwitch) {
+        if (sender.isOn){
+        flexTypeRandom = 1
+        } else{
+        flexTypeRandom = Int(arc4random_uniform(UInt32(flexType.count)))
+        }
+    }
+
+    
+    var flexTypeRandom = 0
+    
+
  
     
     func getFlexType() {
 
-        let flexTypeRandom = Int(arc4random_uniform(UInt32(flexType.count)))
+        flexTypeRandom = Int(arc4random_uniform(UInt32(flexType.count)))
         
         flexDetailLabel.isHidden = false
         
