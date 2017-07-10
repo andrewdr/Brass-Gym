@@ -17,6 +17,7 @@
 		D39A78971F12864E00C265BA /* Brass_GymUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A78961F12864E00C265BA /* Brass_GymUITests.swift */; };
 		D39A78A51F128C8700C265BA /* ScaleTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A78A41F128C8700C265BA /* ScaleTypes.swift */; };
 		D39A78A91F12FCD900C265BA /* FlexTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A78A81F12FCD900C265BA /* FlexTypes.swift */; };
+		D3E9330F1F1347090042E075 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E9330E1F1347090042E075 /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D39A78981F12864E00C265BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D39A78A41F128C8700C265BA /* ScaleTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleTypes.swift; sourceTree = "<group>"; };
 		D39A78A81F12FCD900C265BA /* FlexTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexTypes.swift; sourceTree = "<group>"; };
+		D3E9330E1F1347090042E075 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = ../Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				D39A78741F12864E00C265BA /* AppDelegate.swift */,
+				D3E9330E1F1347090042E075 /* Errors.swift */,
 				D39A78761F12864E00C265BA /* FirstViewController.swift */,
 				D39A78781F12864E00C265BA /* SecondViewController.swift */,
 				D39A787A1F12864E00C265BA /* Main.storyboard */,
@@ -275,6 +278,7 @@
 				D39A78A51F128C8700C265BA /* ScaleTypes.swift in Sources */,
 				D39A78791F12864E00C265BA /* SecondViewController.swift in Sources */,
 				D39A78751F12864E00C265BA /* AppDelegate.swift in Sources */,
+				D3E9330F1F1347090042E075 /* Errors.swift in Sources */,
 				D39A78771F12864E00C265BA /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,6 +15,9 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var flexTypeLabel: UILabel!
     @IBOutlet weak var flexDetailLabel: UILabel!
     @IBOutlet weak var flipDirectionLabel: UILabel!
+    @IBOutlet weak var osValue: UISwitch!
+    @IBOutlet weak var flipValue: UISwitch!
+    
     
     
     @IBAction func flexButton(_ sender: Any) {
@@ -25,28 +28,37 @@ class SecondViewController: UIViewController {
     @IBAction func osOnlySwitch(_ sender: UISwitch) {
         if (sender.isOn) {
         flexTypeRandom = 0
-        } else{
-        flexTypeRandom = Int(arc4random_uniform(UInt32(flexType.count)))
         }
     }
     
     @IBAction func flipsOnlySwitch(_ sender: UISwitch) {
         if (sender.isOn){
         flexTypeRandom = 1
-        } else{
-        flexTypeRandom = Int(arc4random_uniform(UInt32(flexType.count)))
         }
     }
 
     
     var flexTypeRandom = 0
     
+    func getRandomNumber(){
+    
+        if osValue.isOn {
+            flexTypeRandom = 0
+        } else if flipValue.isOn {
+            flexTypeRandom = 1
+        } else if osValue.isOn && flipValue.isOn {
+
+            
+        } else {
+          flexTypeRandom = Int(arc4random_uniform(UInt32(flexType.count)))
+        }
+    }
 
  
     
     func getFlexType() {
 
-        flexTypeRandom = Int(arc4random_uniform(UInt32(flexType.count)))
+        getRandomNumber()
         
         flexDetailLabel.isHidden = false
         
