@@ -14,6 +14,9 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var noteNameLabel: UILabel!
     @IBOutlet weak var scaleTypeLabel: UILabel!
     @IBOutlet weak var majSwitchValue: UISwitch!
+    @IBOutlet weak var minorOnlySwitch: UISwitch!
+    @IBOutlet weak var modesOnlySwitch: UISwitch!
+    @IBOutlet weak var SemetricOnlySwitch: UISwitch!
 
 
 
@@ -40,6 +43,15 @@ class FirstViewController: UIViewController {
         
         if majSwitchValue.isOn {
            scaleTypeLabel.text = scaleType[0]
+        }else if minorOnlySwitch.isOn {
+            randomScaleType = Int(arc4random_uniform(UInt32(minorScales.count)))
+            scaleTypeLabel.text = minorScales[randomScaleType]
+        }else if modesOnlySwitch.isOn {
+            randomScaleType = Int(arc4random_uniform(UInt32(modalScales.count)))
+            scaleTypeLabel.text = modalScales[randomScaleType]
+        }else if SemetricOnlySwitch.isOn {
+            randomScaleType = Int(arc4random_uniform(UInt32(semetricScales.count)))
+            scaleTypeLabel.text = semetricScales[randomScaleType]
         }else{
             randomScaleType = Int(arc4random_uniform(UInt32(scaleType.count)))
             scaleTypeLabel.text = scaleType[randomScaleType]
