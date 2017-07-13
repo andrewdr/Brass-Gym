@@ -42,22 +42,22 @@ class FirstViewController: UIViewController {
         
         noteNameLabel.text = notes[randomNote]
         
-        if majSwitchValue.isOn {
-           scaleTypeLabel.text = scaleType[0]
-        }else if minorOnlySwitch.isOn {
-            randomScaleType = Int(arc4random_uniform(UInt32(minorScales.count)))
-            scaleTypeLabel.text = minorScales[randomScaleType]
-        }else if modesOnlySwitch.isOn {
-            randomScaleType = Int(arc4random_uniform(UInt32(modalScales.count)))
-            scaleTypeLabel.text = modalScales[randomScaleType]
-        }else if symmetricOnlySwitch.isOn {
-            randomScaleType = Int(arc4random_uniform(UInt32(symmetricScales.count)))
-            scaleTypeLabel.text = symmetricScales[randomScaleType]
-        }else{
-            randomScaleType = Int(arc4random_uniform(UInt32(scaleType.count)))
-            scaleTypeLabel.text = scaleType[randomScaleType]
+        if minorOnlySwitch.isOn && modesOnlySwitch.isOn {
+            addModes()
+            addMinors()
+            flatMapScales = selectedScales.flatMap({$0})
+            getScaleType()
         }
+    
     }
+    
+    func getScaleType(){
+        randomScaleType = Int(arc4random_uniform(UInt32(flatMapScales.count)))
+        scaleTypeLabel.text = flatMapScales[randomScaleType]
+    }
+
+    
+
     
     
     
