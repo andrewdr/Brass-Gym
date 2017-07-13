@@ -12,8 +12,19 @@ let notes:Array = ["A", "A♭", "B", "B♭", "C", "C#", "D", "D♭", "E", "E♭"
 
 let scaleType:Array = ["Major", "Natural Minor", "Harmonic Minor", "Melodic Minor", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Lydian Dominant", "Octatonic(W)", "Octatonic(H)", "Chromatic(up)", "Chromatic(down)", "Whole Tone", "Locrian"]
 
+let majorScales:Array = ["Major"]
+
 let minorScales:Array = ["Natural Minor", "Harmonic Minor", "Melodic Minor"]
 
 let modalScales:Array = ["Dorian", "Phrygian", "Lydian","Lydian Dominant", "Mixolydian", "Locrian"]
 
-let semetricScales:Array = ["Octatonic(W)", "Octatonic(H)", "Chromatic(up)", "Chromatic(down)", "Whole Tone"]
+let symmetricScales:Array = ["Octatonic(W)", "Octatonic(H)", "Chromatic(up)", "Chromatic(down)", "Whole Tone"]
+
+var allScales:Array = [String]()
+
+
+func addArray(){
+
+    allScales.append(String(describing: majorScales))
+    print(allScales)
+}

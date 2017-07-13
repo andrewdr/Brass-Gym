@@ -16,7 +16,8 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var majSwitchValue: UISwitch!
     @IBOutlet weak var minorOnlySwitch: UISwitch!
     @IBOutlet weak var modesOnlySwitch: UISwitch!
-    @IBOutlet weak var SemetricOnlySwitch: UISwitch!
+    @IBOutlet weak var symmetricOnlySwitch: UISwitch!
+
 
 
 
@@ -49,9 +50,9 @@ class FirstViewController: UIViewController {
         }else if modesOnlySwitch.isOn {
             randomScaleType = Int(arc4random_uniform(UInt32(modalScales.count)))
             scaleTypeLabel.text = modalScales[randomScaleType]
-        }else if SemetricOnlySwitch.isOn {
-            randomScaleType = Int(arc4random_uniform(UInt32(semetricScales.count)))
-            scaleTypeLabel.text = semetricScales[randomScaleType]
+        }else if symmetricOnlySwitch.isOn {
+            randomScaleType = Int(arc4random_uniform(UInt32(symmetricScales.count)))
+            scaleTypeLabel.text = symmetricScales[randomScaleType]
         }else{
             randomScaleType = Int(arc4random_uniform(UInt32(scaleType.count)))
             scaleTypeLabel.text = scaleType[randomScaleType]

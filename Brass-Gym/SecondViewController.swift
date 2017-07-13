@@ -16,7 +16,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var flexDetailLabel: UILabel!
     @IBOutlet weak var flipDirectionLabel: UILabel!
     @IBOutlet weak var osValue: UISwitch!
-    @IBOutlet weak var flipValue: UISwitch!
+    @IBOutlet weak var flipSwitch: UISwitch!
+
     
     
     
@@ -44,9 +45,9 @@ class SecondViewController: UIViewController {
     
         if osValue.isOn {
             flexTypeRandom = 0
-        } else if flipValue.isOn {
+        } else if flipSwitch.isOn {
             flexTypeRandom = 1
-        } else if osValue.isOn && flipValue.isOn {
+        } else if osValue.isOn && flipSwitch.isOn {
 
             
         } else {
