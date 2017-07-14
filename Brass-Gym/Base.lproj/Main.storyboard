@@ -61,7 +61,7 @@
                                     <action selector="randomScaleBtn:" destination="9pv-A4-QxB" eventType="touchUpInside" id="mVU-3D-7re"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="41c-5Y-Bsu">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="41c-5Y-Bsu">
                                 <rect key="frame" x="266" y="412" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major Only" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRE-jB-qB6">
@@ -84,7 +84,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xHf-bp-Ayk">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xHf-bp-Ayk">
                                 <rect key="frame" x="266" y="451" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modes Only" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JZ-Fk-WRe">
@@ -97,10 +97,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DDt-CX-IX7">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDt-CX-IX7">
                                 <rect key="frame" x="266" y="493" width="51" height="31"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eNY-cP-2UT">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eNY-cP-2UT">
                                 <rect key="frame" x="266" y="534" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symmetric Only" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puL-gT-bTp">
@@ -309,6 +309,96 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
+        <!--Dynamics-->
+        <scene sceneID="ocl-Vw-mar">
+            <objects>
+                <viewController id="W3m-d7-ghH" customClass="ThirdViewController" customModule="Brass_Gym" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bHa-O9-2ye"/>
+                        <viewControllerLayoutGuide type="bottom" id="r0S-ca-XEe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jh1-wL-mdV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dynamics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbh-MQ-3RY">
+                                <rect key="frame" x="108" y="28" width="159" height="42"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icp-pr-ZJI">
+                                <rect key="frame" x="109" y="314" width="158" height="38"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.1137254902" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="Vj0-h8-K9D"/>
+                                    <constraint firstAttribute="width" constant="158" id="d7Z-mF-E1g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Get Dynamics">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getDynamics:" destination="W3m-d7-ghH" eventType="touchUpInside" id="22Z-Sb-yKV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fa-NX-Ah6">
+                                <rect key="frame" x="79" y="376" width="216" height="38"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.1137254902" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="216" id="0Ot-dF-nDH"/>
+                                    <constraint firstAttribute="height" constant="38" id="uBm-8d-4Iz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Get Dynamic Scheme">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getDynamicScheme:" destination="W3m-d7-ghH" eventType="touchUpInside" id="6Pq-so-lYr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hz-wL-fX8">
+                                <rect key="frame" x="50" y="148" width="275" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="5WW-ZX-IXS"/>
+                                    <constraint firstAttribute="width" constant="275" id="JjU-Ny-S2W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Fa-NX-Ah6" firstAttribute="centerX" secondItem="Jh1-wL-mdV" secondAttribute="centerX" id="71k-Fg-8ee"/>
+                            <constraint firstItem="Cbh-MQ-3RY" firstAttribute="centerX" secondItem="Jh1-wL-mdV" secondAttribute="centerX" id="GlR-tV-dKu"/>
+                            <constraint firstItem="icp-pr-ZJI" firstAttribute="centerX" secondItem="Jh1-wL-mdV" secondAttribute="centerX" id="Jen-o9-Hub"/>
+                            <constraint firstItem="icp-pr-ZJI" firstAttribute="top" secondItem="6hz-wL-fX8" secondAttribute="bottom" constant="133" id="NMJ-Wk-KLB"/>
+                            <constraint firstItem="6Fa-NX-Ah6" firstAttribute="top" secondItem="icp-pr-ZJI" secondAttribute="bottom" constant="24" id="eML-yd-ces"/>
+                            <constraint firstItem="Cbh-MQ-3RY" firstAttribute="top" secondItem="bHa-O9-2ye" secondAttribute="bottom" constant="8" id="h9c-85-k0K"/>
+                            <constraint firstItem="6hz-wL-fX8" firstAttribute="centerX" secondItem="Jh1-wL-mdV" secondAttribute="centerX" id="hY4-fy-D9r"/>
+                            <constraint firstItem="6hz-wL-fX8" firstAttribute="top" secondItem="Cbh-MQ-3RY" secondAttribute="bottom" constant="78" id="wdr-Sg-6sk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dynamics" image="second" id="MEq-2M-CkF"/>
+                    <connections>
+                        <outlet property="dynamicDisplay" destination="6hz-wL-fX8" id="mOK-5B-HxJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjM-Sw-Z0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744.79999999999995" y="1015.1424287856073"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -322,6 +412,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="W3m-d7-ghH" kind="relationship" relationship="viewControllers" id="jWQ-y6-qdU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
