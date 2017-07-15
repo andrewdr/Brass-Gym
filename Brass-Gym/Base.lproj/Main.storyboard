@@ -272,6 +272,16 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dVh-7c-7zq">
                                 <rect key="frame" x="285" y="437" width="51" height="31"/>
                             </switch>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A♭" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urR-bw-LbW">
+                                <rect key="frame" x="150" y="215" width="74" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="85m-br-svb"/>
+                                    <constraint firstAttribute="width" constant="74" id="n9f-sj-6RD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -284,6 +294,7 @@
                             <constraint firstItem="pDw-Mq-sjd" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Kiv-LY-hrh"/>
                             <constraint firstItem="dVh-7c-7zq" firstAttribute="top" secondItem="TPD-Rd-JRU" secondAttribute="bottom" constant="23" id="Qwa-Kk-Uq5"/>
                             <constraint firstItem="krh-aM-Qge" firstAttribute="top" secondItem="pDw-Mq-sjd" secondAttribute="bottom" constant="8" id="VE2-0s-vLF"/>
+                            <constraint firstItem="urR-bw-LbW" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="bhy-Hh-Cwy"/>
                             <constraint firstItem="wKy-zL-KtJ" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="goU-h2-boe"/>
                             <constraint firstItem="fVl-Sa-HXh" firstAttribute="top" secondItem="wKy-zL-KtJ" secondAttribute="bottom" constant="27" id="hhe-6k-nFr"/>
                             <constraint firstItem="fVl-Sa-HXh" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="juS-Q3-2DV"/>
@@ -293,6 +304,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="TPD-Rd-JRU" secondAttribute="trailing" constant="24.5" id="ur7-Pj-qFu"/>
                             <constraint firstItem="fDY-Ki-nw5" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="vQz-JX-gvZ"/>
                             <constraint firstItem="fDY-Ki-nw5" firstAttribute="top" secondItem="krh-aM-Qge" secondAttribute="bottom" constant="8" id="xzY-vB-TKu"/>
+                            <constraint firstItem="bLK-QL-5ZY" firstAttribute="top" secondItem="urR-bw-LbW" secondAttribute="bottom" constant="68" id="zcx-iX-cJI"/>
+                            <constraint firstItem="urR-bw-LbW" firstAttribute="top" secondItem="fDY-Ki-nw5" secondAttribute="bottom" constant="-21" id="zfL-yu-FDE"/>
                             <constraint firstItem="krh-aM-Qge" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="ztg-ep-RDx"/>
                         </constraints>
                     </view>
@@ -302,6 +315,7 @@
                         <outlet property="flexTypeLabel" destination="pDw-Mq-sjd" id="QCA-fs-mqk"/>
                         <outlet property="flipDirectionLabel" destination="fDY-Ki-nw5" id="35d-H1-7cv"/>
                         <outlet property="flipSwitch" destination="dVh-7c-7zq" id="cSo-wp-3YI"/>
+                        <outlet property="noteLabel" destination="urR-bw-LbW" id="6jd-A8-hqY"/>
                         <outlet property="osValue" destination="TPD-Rd-JRU" id="gy8-ke-4DZ"/>
                     </connections>
                 </viewController>

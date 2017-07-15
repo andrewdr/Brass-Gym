@@ -17,6 +17,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var flipDirectionLabel: UILabel!
     @IBOutlet weak var osValue: UISwitch!
     @IBOutlet weak var flipSwitch: UISwitch!
+    @IBOutlet weak var noteLabel: UILabel!
 
     
     
@@ -48,10 +49,9 @@ class SecondViewController: UIViewController {
         } else if flipSwitch.isOn {
             flexTypeRandom = 1
         } else if osValue.isOn && flipSwitch.isOn {
-
-            
+            flexTypeRandom = Int(arc4random_uniform(UInt32(flexType.count)))
         } else {
-          flexTypeRandom = Int(arc4random_uniform(UInt32(flexType.count)))
+            flexTypeRandom = Int(arc4random_uniform(UInt32(flexType.count)))
         }
     }
 
@@ -93,8 +93,24 @@ class SecondViewController: UIViewController {
             }
         }
         getFlipDirection()
+        
+        let flexUp = "Flex Flow Up"
+        let flexDown = "Flex Flow Down"
+        
+        if flexDetailLabel.text == flexUp{
+            getFlexFlowNote()
+        }else if flexDetailLabel.text == flexDown{
+            getFlexFlowNote()
+        }else{
+            noteLabel.isHidden = true
+        }
     }
     
+    func getFlexFlowNote(){
+        let randomNumber = Int(arc4random_uniform(UInt32(notes.count)))
+        noteLabel.text = notes[randomNumber]
+        noteLabel.isHidden = false
+    }
     
     
     
