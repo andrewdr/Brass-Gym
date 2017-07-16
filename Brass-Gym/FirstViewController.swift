@@ -16,7 +16,8 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var majSwitchValue: UISwitch!
     @IBOutlet weak var minorOnlySwitch: UISwitch!
     @IBOutlet weak var modesOnlySwitch: UISwitch!
-    @IBOutlet weak var SemetricOnlySwitch: UISwitch!
+    @IBOutlet weak var symmetricOnlySwitch: UISwitch!
+
 
 
 
@@ -41,22 +42,37 @@ class FirstViewController: UIViewController {
         
         noteNameLabel.text = notes[randomNote]
         
-        if majSwitchValue.isOn {
-           scaleTypeLabel.text = scaleType[0]
-        }else if minorOnlySwitch.isOn {
-            randomScaleType = Int(arc4random_uniform(UInt32(minorScales.count)))
-            scaleTypeLabel.text = minorScales[randomScaleType]
-        }else if modesOnlySwitch.isOn {
-            randomScaleType = Int(arc4random_uniform(UInt32(modalScales.count)))
-            scaleTypeLabel.text = modalScales[randomScaleType]
-        }else if SemetricOnlySwitch.isOn {
-            randomScaleType = Int(arc4random_uniform(UInt32(semetricScales.count)))
-            scaleTypeLabel.text = semetricScales[randomScaleType]
-        }else{
-            randomScaleType = Int(arc4random_uniform(UInt32(scaleType.count)))
-            scaleTypeLabel.text = scaleType[randomScaleType]
-        }
+            getScaleType()
+    
     }
+    
+    func getScaleType(){
+        getScaleArray()
+        randomScaleType = Int(arc4random_uniform(UInt32(flatMapScales.count)))
+        scaleTypeLabel.text = flatMapScales[randomScaleType]
+    }
+
+    func getScaleArray(){
+        
+    
+        if majSwitchValue.isOn{
+            addMajors()
+        }
+        
+        if minorOnlySwitch.isOn{
+            addMinors()
+        }
+        if modesOnlySwitch.isOn{
+            addModes()
+        }
+        if symmetricOnlySwitch.isOn{
+            addSymmetrics()
+        }
+        
+        flatMapScales = selectedScales.flatMap({$0})
+    
+    }
+
     
     
     

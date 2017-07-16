@@ -8,12 +8,43 @@
 
 import Foundation
 
-let notes:Array = ["A", "A♭", "B", "B♭", "C", "C#", "D", "D♭", "E", "E♭", "F", "F#", "G", "G♭"]
+let notes:[String] = ["A", "A♭", "B", "B♭", "C", "C♯", "D", "D♭", "E", "E♭", "F", "F♯", "G", "G♭"]
 
-let scaleType:Array = ["Major", "Natural Minor", "Harmonic Minor", "Melodic Minor", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Lydian Dominant", "Octatonic(W)", "Octatonic(H)", "Chromatic(up)", "Chromatic(down)", "Whole Tone", "Locrian"]
+let scaleType:[String] = ["Major", "Natural Minor", "Harmonic Minor", "Melodic Minor", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Lydian Dominant", "Octatonic(W)", "Octatonic(H)", "Chromatic(up)", "Chromatic(down)", "Whole Tone", "Locrian"]
 
-let minorScales:Array = ["Natural Minor", "Harmonic Minor", "Melodic Minor"]
+let majorScales:[String] = ["Major"]
 
-let modalScales:Array = ["Dorian", "Phrygian", "Lydian","Lydian Dominant", "Mixolydian", "Locrian"]
+let minorScales:[String] = ["Natural Minor", "Harmonic Minor", "Melodic Minor"]
 
-let semetricScales:Array = ["Octatonic(W)", "Octatonic(H)", "Chromatic(up)", "Chromatic(down)", "Whole Tone"]
+let modalScales:[String] = ["Dorian", "Phrygian", "Lydian","Lydian Dominant", "Mixolydian", "Locrian"]
+
+let symmetricScales:[String] = ["Octatonic(W)", "Octatonic(H)", "Chromatic(up)", "Chromatic(down)", "Whole Tone"]
+
+var selectedScales:[String] = []
+
+var flatMapScales:[String] = []
+
+
+
+func addMajors(){
+    selectedScales.append(contentsOf: majorScales)
+}
+
+func addMinors(){
+    selectedScales.append(contentsOf: minorScales)
+}
+
+func addModes(){
+    selectedScales.append(contentsOf: modalScales)
+}
+
+func addSymmetrics(){
+    selectedScales.append(contentsOf: symmetricScales)
+}
+
+
+
+
+
+
+
