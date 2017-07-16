@@ -413,6 +413,71 @@
             </objects>
             <point key="canvasLocation" x="744.79999999999995" y="1015.1424287856073"/>
         </scene>
+        <!--Metronome-->
+        <scene sceneID="6ja-NQ-fP1">
+            <objects>
+                <viewController id="CfP-f3-8uR" customClass="FourthViewController" customModule="Brass_Gym" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aC9-IK-pWw"/>
+                        <viewControllerLayoutGuide type="bottom" id="efD-yO-aRz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eKE-bH-NhG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metronome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYu-qR-f9f">
+                                <rect key="frame" x="95" y="28" width="185" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="1CC-9f-o2n"/>
+                                    <constraint firstAttribute="width" constant="185" id="VzD-U6-cvO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zdZ-xa-vIs">
+                                <rect key="frame" x="140" y="498" width="94" height="29"/>
+                                <connections>
+                                    <action selector="tempoSelector:" destination="CfP-f3-8uR" eventType="valueChanged" id="NBx-eR-jh6"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2f9-1C-Ys3">
+                                <rect key="frame" x="140" y="443" width="94" height="47"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="HOg-Zw-XPV"/>
+                                    <constraint firstAttribute="width" constant="94" id="JMS-qu-4YY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2f9-1C-Ys3" firstAttribute="centerX" secondItem="eKE-bH-NhG" secondAttribute="centerX" id="8WW-e2-hT2"/>
+                            <constraint firstItem="KYu-qR-f9f" firstAttribute="centerX" secondItem="eKE-bH-NhG" secondAttribute="centerX" id="ACE-8R-Ktw"/>
+                            <constraint firstItem="zdZ-xa-vIs" firstAttribute="top" secondItem="2f9-1C-Ys3" secondAttribute="bottom" constant="8" id="DoM-Fk-Q7N"/>
+                            <constraint firstItem="KYu-qR-f9f" firstAttribute="top" secondItem="aC9-IK-pWw" secondAttribute="bottom" constant="8" id="Lae-jS-miM"/>
+                            <constraint firstItem="2f9-1C-Ys3" firstAttribute="top" secondItem="KYu-qR-f9f" secondAttribute="bottom" constant="373" id="ijm-xs-cNh"/>
+                            <constraint firstItem="zdZ-xa-vIs" firstAttribute="centerX" secondItem="eKE-bH-NhG" secondAttribute="centerX" id="y74-jv-Af5"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Metronome" image="second" selectedImage="second" id="z5D-85-PVz"/>
+                    <connections>
+                        <outlet property="tempoDisplay" destination="2f9-1C-Ys3" id="P0C-CJ-g6d"/>
+                        <outlet property="tempoStepper" destination="zdZ-xa-vIs" id="jso-d2-sEo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oVQ-yb-ofi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="1681.7091454272866"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -427,6 +492,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="W3m-d7-ghH" kind="relationship" relationship="viewControllers" id="jWQ-y6-qdU"/>
+                        <segue destination="CfP-f3-8uR" kind="relationship" relationship="viewControllers" id="fJp-fX-l2w"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
