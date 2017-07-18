@@ -493,6 +493,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Metronome" image="second" selectedImage="second" id="z5D-85-PVz"/>
                     <connections>
+                        <outlet property="startStopBtnTxt" destination="Jv4-DE-Omw" id="wbN-Y2-LUf"/>
                         <outlet property="tempoDisplay" destination="2f9-1C-Ys3" id="P0C-CJ-g6d"/>
                         <outlet property="tempoStepper" destination="zdZ-xa-vIs" id="jso-d2-sEo"/>
                     </connections>

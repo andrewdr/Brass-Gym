@@ -13,9 +13,11 @@ class FourthViewController: UIViewController {
     
     @IBOutlet weak var tempoDisplay: UILabel!
     @IBOutlet weak var tempoStepper: UIStepper!
+    @IBOutlet weak var startStopBtnTxt: UIButton!
+
     
     var metTimer: Timer!
-    var metIsOn = true
+    var metIsOff = true
     var metPlayer: AVAudioPlayer!
 
     var tempo: TimeInterval = 60 {
@@ -32,45 +34,46 @@ class FourthViewController: UIViewController {
         tempo = tempoStepper.value
     }
     
-//    @IBAction func startStopBtn(_ sender: UIButton) {
-//        
-//        if metIsOn == false{
-//            startMet()
-//        }else{
-//            stopMet()
-//        }
-//        
-//    }
-//    
-//    func startMet(){
-//    
-//        metIsOn = true
-//        let metTimeInterval: TimeInterval = 60.0 / tempo
-//        metTimer = Timer.scheduledTimer(timeInterval: metTimeInterval, target: self, selector: #selector(FourthViewController.playSound), userInfo: nil, repeats: true)
-//        metTimer?.fire()
-//        tempoStepper.isEnabled = false
-//    }
-//    
-//    func stopMet(){
-//    
-//        metIsOn = false
-//        metTimer?.invalidate()
-//        tempoStepper.isEnabled = true
-//    }
-//
-//    func playSound(){
-//    
-//    }
+    @IBAction func startStopBtn(_ sender: UIButton) {
+        
+        if metIsOff{
+            startMet()
+        }else{
+            stopMet()
+        }
+        
+    }
     
+    func startMet(){
     
+        metIsOff = false
+        let metTimeInterval: TimeInterval = 60.0 / tempo
+        metTimer = Timer.scheduledTimer(timeInterval: metTimeInterval, target: self, selector: #selector(FourthViewController.playSound), userInfo: nil, repeats: true)
+        metTimer?.fire()
+        startStopBtnTxt.setTitle("Stop", for: .normal)
+        tempoStepper.isEnabled = false
+    }
+    
+    func stopMet(){
+    
+        metIsOff = true
+        metTimer?.invalidate()
+        startStopBtnTxt.setTitle("Start", for: .normal)
+        tempoStepper.isEnabled = true
+    }
 
+    func playSound(){
+        metPlayer.play()
+    }
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tempo = 100
+        let metSoundURL = URL(fileURLWithPath: Bundle.main.path(forResource: "metronomeClick", ofType: "mp3")!)
+        metPlayer = try! AVAudioPlayer(contentsOf: metSoundURL)
+        metPlayer.prepareToPlay()
+
     }
 
     override func didReceiveMemoryWarning() {

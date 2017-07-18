@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D31A766F1F1DD4A4004E5D89 /* metronomeClick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D31A766E1F1DD4A4004E5D89 /* metronomeClick.mp3 */; };
 		D39A78751F12864E00C265BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A78741F12864E00C265BA /* AppDelegate.swift */; };
 		D39A78771F12864E00C265BA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A78761F12864E00C265BA /* FirstViewController.swift */; };
 		D39A78791F12864E00C265BA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A78781F12864E00C265BA /* SecondViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D31A766E1F1DD4A4004E5D89 /* metronomeClick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = metronomeClick.mp3; sourceTree = "<group>"; };
 		D39A78711F12864E00C265BA /* Brass-Gym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brass-Gym.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39A78741F12864E00C265BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D39A78761F12864E00C265BA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				D39A78A41F128C8700C265BA /* ScaleTypes.swift */,
 				D3CCEF6F1F188B5300C17AC6 /* Dynamics.swift */,
 				D39A787D1F12864E00C265BA /* Assets.xcassets */,
+				D31A766E1F1DD4A4004E5D89 /* metronomeClick.mp3 */,
 				D39A787F1F12864E00C265BA /* LaunchScreen.storyboard */,
 				D39A78821F12864E00C265BA /* Info.plist */,
 			);
@@ -256,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D31A766F1F1DD4A4004E5D89 /* metronomeClick.mp3 in Resources */,
 				D39A78811F12864E00C265BA /* LaunchScreen.storyboard in Resources */,
 				D39A787E1F12864E00C265BA /* Assets.xcassets in Resources */,
 				D39A787C1F12864E00C265BA /* Main.storyboard in Resources */,
