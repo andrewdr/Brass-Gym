@@ -18,6 +18,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var modesOnlySwitch: UISwitch!
     @IBOutlet weak var symmetricOnlySwitch: UISwitch!
 
+    var sendScale = "Scale 1"
 
 
     @IBAction func majorSwitch(_ sender: UISwitch) {
@@ -44,6 +45,9 @@ class FirstViewController: UIViewController {
         }
     }
 
+    @IBAction func getScaleDetail(_ sender: Any) {
+        sendScale = scaleTypeLabel.text!
+    }
 
     
     @IBAction func randomScaleBtn(_ sender: Any) {
