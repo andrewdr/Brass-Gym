@@ -20,8 +20,31 @@ class FirstViewController: UIViewController {
 
 
 
-
+    @IBAction func majorSwitch(_ sender: UISwitch) {
+        if majSwitchValue.isOn{
+            addMajors()
+        }
+    }
+    @IBAction func minorSwitch(_ sender: UISwitch) {
+        if minorOnlySwitch.isOn{
+        addMinors()
+        }else{
+            
+        }
+    }
+    @IBAction func modesSwitch(_ sender: UISwitch) {
+        if modesOnlySwitch.isOn{
+        addModes()
+        }
+    }
     
+    @IBAction func symmetricSwitch(_ sender: UISwitch) {
+        if symmetricOnlySwitch.isOn{
+        addSymmetrics()
+        }
+    }
+
+
     
     @IBAction func randomScaleBtn(_ sender: Any) {
         getRandomScale()
@@ -47,35 +70,11 @@ class FirstViewController: UIViewController {
     }
     
     func getScaleType(){
-        getScaleArray()
+        flatMapScales = selectedScales.flatMap({$0})
         randomScaleType = Int(arc4random_uniform(UInt32(flatMapScales.count)))
         scaleTypeLabel.text = flatMapScales[randomScaleType]
     }
 
-    func getScaleArray(){
-        
-    
-        if majSwitchValue.isOn{
-            addMajors()
-        }
-        
-        if minorOnlySwitch.isOn{
-            addMinors()
-        }
-        if modesOnlySwitch.isOn{
-            addModes()
-        }
-        if symmetricOnlySwitch.isOn{
-            addSymmetrics()
-        }
-        
-        flatMapScales = selectedScales.flatMap({$0})
-    
-    }
-
-    
-    
-    
     
 
     override func viewDidLoad() {
