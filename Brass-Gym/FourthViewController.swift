@@ -28,12 +28,11 @@ class FourthViewController: UIViewController {
     }
     
     @IBAction func selectTempo(_ sender: UIStepper) {
-        
         tempoStepper.minimumValue = 0.0
         tempoStepper.maximumValue = 250.0
         tempo = tempoStepper.value
-    }
-    
+        }
+
     @IBAction func startStopBtn(_ sender: UIButton) {
         
         if metIsOff{
