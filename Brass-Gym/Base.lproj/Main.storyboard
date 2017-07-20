@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--scales-->
+        <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Brass_Gym" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Scale Selector" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="71" y="28" width="233" height="42"/>
+                                <rect key="frame" x="71" y="72" width="233" height="42"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="10a-uQ-Ijd"/>
@@ -34,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8MY-tJ-mWK">
-                                <rect key="frame" x="60" y="425" width="186" height="147"/>
+                                <rect key="frame" x="60" y="376" width="186" height="147"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major Scales" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRE-jB-qB6">
                                         <rect key="frame" x="50.5" y="0.0" width="135.5" height="33"/>
@@ -63,7 +63,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="oYo-ac-P91">
-                                <rect key="frame" x="260" y="425" width="49" height="145"/>
+                                <rect key="frame" x="260" y="376" width="49" height="145"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="41c-5Y-Bsu">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
@@ -92,7 +92,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfi-82-gxx">
-                                <rect key="frame" x="66" y="597" width="242" height="40"/>
+                                <rect key="frame" x="66" y="548" width="242" height="40"/>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.11372549019607843" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="B88-8V-oIl"/>
@@ -112,7 +112,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ojp-7p-KrO">
-                                <rect key="frame" x="101" y="92" width="173" height="74"/>
+                                <rect key="frame" x="101" y="136" width="173" height="74"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A♭" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysC-0c-Ty2">
                                         <rect key="frame" x="61" y="0.0" width="51" height="41"/>
@@ -129,7 +129,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnG-EC-EHY">
-                                <rect key="frame" x="282" y="134" width="21" height="32"/>
+                                <rect key="frame" x="282" y="178" width="21" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="ctR-NU-vLf"/>
                                     <constraint firstAttribute="width" constant="21" id="hY0-Rf-cRm"/>
@@ -137,7 +137,7 @@
                                 <state key="normal" image="question-mark"/>
                                 <connections>
                                     <action selector="getScaleDetail:" destination="9pv-A4-QxB" eventType="touchUpInside" id="HVz-PA-Y9v"/>
-                                    <segue destination="mTx-cu-IHu" kind="presentation" id="IPi-EL-Uj7"/>
+                                    <segue destination="mTx-cu-IHu" kind="show" id="FCw-Lr-A1a"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -158,7 +158,7 @@
                             <constraint firstItem="kfi-82-gxx" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="kbe-Mq-NkJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="scales" image="scale-tab-icon2" selectedImage="scale-tab-icon2" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="Cbv-mE-Kky"/>
                     <connections>
                         <outlet property="majSwitchValue" destination="41c-5Y-Bsu" id="DfD-jc-9Sx"/>
                         <outlet property="minorOnlySwitch" destination="xHf-bp-Ayk" id="bpc-ie-lse"/>
@@ -170,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="1688.8" y="-320.68965517241384"/>
         </scene>
         <!--Scale DetailVC-->
         <scene sceneID="pTl-3L-Yw8">
@@ -184,36 +184,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rb2-46-kwv">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="5ns-5i-oN6"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Scale Details" id="iCq-dB-Bdv">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="ncU-DE-Ibf">
-                                            <connections>
-                                                <segue destination="9pv-A4-QxB" kind="show" id="iqV-Vn-Kvg"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scale Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9r-hx-C6g">
-                                <rect key="frame" x="84" y="93" width="207" height="33"/>
+                                <rect key="frame" x="91" y="72" width="192" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="207" id="M2t-tV-iML"/>
-                                    <constraint firstAttribute="height" constant="33" id="mQ5-Lh-o76"/>
+                                    <constraint firstAttribute="width" constant="192" id="6Ja-7e-l26"/>
+                                    <constraint firstAttribute="height" constant="33" id="Pbt-1J-Ga5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C Major" translatesAutoresizingMaskIntoConstraints="NO" id="XO0-S6-GI7">
-                                <rect key="frame" x="16" y="184" width="343" height="109"/>
+                                <rect key="frame" x="16" y="173" width="343" height="92"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dKP-YI-Vxj">
-                                <rect key="frame" x="16" y="301" width="343" height="213"/>
+                                <rect key="frame" x="16" y="273" width="343" height="213"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">A major scale is a diatonic scale. The sequence of intervals between the notes of a major scale is:
 
@@ -224,18 +209,15 @@ whole, whole, half, whole, whole, whole, half</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XO0-S6-GI7" firstAttribute="top" secondItem="r9r-hx-C6g" secondAttribute="bottom" constant="58" id="1u0-NJ-AIH"/>
                             <constraint firstItem="dKP-YI-Vxj" firstAttribute="centerX" secondItem="E1A-1v-eg7" secondAttribute="centerX" id="3Tv-Lb-oT1"/>
                             <constraint firstItem="dKP-YI-Vxj" firstAttribute="leading" secondItem="E1A-1v-eg7" secondAttribute="leadingMargin" id="8JF-as-pwS"/>
-                            <constraint firstItem="Blo-O2-8uy" firstAttribute="top" secondItem="XO0-S6-GI7" secondAttribute="bottom" constant="374" id="F9w-IA-qSR"/>
-                            <constraint firstItem="Rb2-46-kwv" firstAttribute="centerX" secondItem="r9r-hx-C6g" secondAttribute="centerX" id="Fzf-SO-LN1"/>
-                            <constraint firstItem="Rb2-46-kwv" firstAttribute="leading" secondItem="E1A-1v-eg7" secondAttribute="leading" id="RQe-TC-8R0"/>
+                            <constraint firstItem="Blo-O2-8uy" firstAttribute="top" secondItem="XO0-S6-GI7" secondAttribute="bottom" constant="353" id="F9w-IA-qSR"/>
+                            <constraint firstItem="r9r-hx-C6g" firstAttribute="top" secondItem="bHZ-6s-AuB" secondAttribute="bottom" constant="8" id="KWu-NZ-x2O"/>
                             <constraint firstItem="dKP-YI-Vxj" firstAttribute="trailing" secondItem="E1A-1v-eg7" secondAttribute="trailingMargin" id="SWZ-WB-HRt"/>
                             <constraint firstItem="XO0-S6-GI7" firstAttribute="leading" secondItem="E1A-1v-eg7" secondAttribute="leadingMargin" id="TVJ-rW-Pym"/>
-                            <constraint firstItem="Rb2-46-kwv" firstAttribute="top" secondItem="bHZ-6s-AuB" secondAttribute="bottom" id="akr-9e-RRQ"/>
-                            <constraint firstItem="Blo-O2-8uy" firstAttribute="top" secondItem="dKP-YI-Vxj" secondAttribute="bottom" constant="153" id="beD-mf-4Wk"/>
-                            <constraint firstItem="r9r-hx-C6g" firstAttribute="centerX" secondItem="E1A-1v-eg7" secondAttribute="centerX" id="kBz-S4-NCm"/>
-                            <constraint firstItem="r9r-hx-C6g" firstAttribute="top" secondItem="Rb2-46-kwv" secondAttribute="bottom" constant="29" id="ooQ-rb-w4k"/>
+                            <constraint firstItem="r9r-hx-C6g" firstAttribute="centerX" secondItem="E1A-1v-eg7" secondAttribute="centerX" id="b3D-Dt-J9U"/>
+                            <constraint firstItem="Blo-O2-8uy" firstAttribute="top" secondItem="dKP-YI-Vxj" secondAttribute="bottom" constant="132" id="beD-mf-4Wk"/>
+                            <constraint firstItem="XO0-S6-GI7" firstAttribute="top" secondItem="r9r-hx-C6g" secondAttribute="bottom" constant="68" id="lOu-85-9gE"/>
                             <constraint firstItem="XO0-S6-GI7" firstAttribute="trailing" secondItem="E1A-1v-eg7" secondAttribute="trailingMargin" id="yoC-bT-vhK"/>
                             <constraint firstItem="dKP-YI-Vxj" firstAttribute="top" secondItem="XO0-S6-GI7" secondAttribute="bottom" constant="8" id="zt3-Ne-1gy"/>
                         </constraints>
@@ -246,7 +228,7 @@ whole, whole, half, whole, whole, whole, half</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Woe-hT-rf4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1437.5999999999999" y="-321.58920539730138"/>
+            <point key="canvasLocation" x="2376.8000000000002" y="-321.58920539730138"/>
         </scene>
         <!--Flexibility-->
         <scene sceneID="wg7-f3-ORb">
@@ -590,7 +572,7 @@ whole, whole, half, whole, whole, whole, half</string>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="Ppi-xp-pIu" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="W3m-d7-ghH" kind="relationship" relationship="viewControllers" id="jWQ-y6-qdU"/>
                         <segue destination="CfP-f3-8uR" kind="relationship" relationship="viewControllers" id="fJp-fX-l2w"/>
@@ -600,6 +582,25 @@ whole, whole, half, whole, whole, whole, half</string>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
+        <!--scales-->
+        <scene sceneID="dIJ-Oe-blw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ppi-xp-pIu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="scales" image="scale-tab-icon2" selectedImage="scale-tab-icon2" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dNt-ev-u35">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="n3T-9I-Y8a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DRl-rB-rjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+        </scene>
     </scenes>
     <resources>
         <image name="C Major" width="600" height="185"/>
@@ -607,7 +608,4 @@ whole, whole, half, whole, whole, whole, half</string>
         <image name="scale-tab-icon2" width="30" height="40"/>
         <image name="second" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="iqV-Vn-Kvg"/>
-    </inferredMetricsTieBreakers>
 </document>
