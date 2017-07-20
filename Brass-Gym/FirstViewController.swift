@@ -74,9 +74,15 @@ class FirstViewController: UIViewController {
     }
     
     func getScaleType(){
+        
+        if selectedScales == []{
+            scaleTypeLabel.text = majorScales[0]
+        }else{
+        
         flatMapScales = selectedScales.flatMap({$0})
         randomScaleType = Int(arc4random_uniform(UInt32(flatMapScales.count)))
         scaleTypeLabel.text = flatMapScales[randomScaleType]
+        }
     }
 
     
