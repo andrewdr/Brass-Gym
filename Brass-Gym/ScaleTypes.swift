@@ -42,6 +42,25 @@ func addSymmetrics(){
     selectedScales.append(contentsOf: symmetricScales)
 }
 
+func removeMajors(){
+    selectedScales = Array(Set(selectedScales).subtracting(majorScales))
+}
+
+func removeMinors(){
+    selectedScales = Array(Set(selectedScales).subtracting(minorScales))
+}
+
+func removeModes(){
+    selectedScales = Array(Set(selectedScales).subtracting(modalScales))
+}
+
+func removeSymmetrics(){
+    selectedScales = Array(Set(selectedScales).subtracting(symmetricScales))
+}
+
+
+
+
 
 
 

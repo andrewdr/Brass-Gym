@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -111,25 +111,8 @@
                                     <action selector="randomScaleBtn:" destination="9pv-A4-QxB" eventType="touchUpInside" id="mVU-3D-7re"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ojp-7p-KrO">
-                                <rect key="frame" x="101" y="136" width="173" height="74"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysC-0c-Ty2">
-                                        <rect key="frame" x="76" y="0.0" width="21.5" height="41"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDy-Pr-C47">
-                                        <rect key="frame" x="55.5" y="41" width="62" height="33"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnG-EC-EHY">
-                                <rect key="frame" x="282" y="178" width="21" height="32"/>
+                                <rect key="frame" x="177" y="231" width="21" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="ctR-NU-vLf"/>
                                     <constraint firstAttribute="width" constant="21" id="hY0-Rf-cRm"/>
@@ -140,6 +123,27 @@
                                     <segue destination="mTx-cu-IHu" kind="show" id="FCw-Lr-A1a"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ojp-7p-KrO">
+                                <rect key="frame" x="75" y="136" width="225" height="74"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysC-0c-Ty2">
+                                        <rect key="frame" x="102" y="0.0" width="21.5" height="41"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDy-Pr-C47">
+                                        <rect key="frame" x="81.5" y="41" width="62" height="33"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="3Cx-c6-B5G"/>
+                                    <constraint firstAttribute="width" constant="225" id="8pl-M2-yEy"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -148,13 +152,13 @@
                             <constraint firstItem="kfi-82-gxx" firstAttribute="top" secondItem="oYo-ac-P91" secondAttribute="bottom" constant="27" id="76W-Zj-3Pd"/>
                             <constraint firstItem="Ojp-7p-KrO" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="22" id="HVR-Tw-sqd"/>
                             <constraint firstItem="8MY-tJ-mWK" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="44" id="IMQ-LH-4iJ"/>
-                            <constraint firstItem="DnG-EC-EHY" firstAttribute="leading" secondItem="Ojp-7p-KrO" secondAttribute="trailing" constant="8" id="Qrr-ua-WG4"/>
+                            <constraint firstItem="DnG-EC-EHY" firstAttribute="leading" secondItem="Ojp-7p-KrO" secondAttribute="trailing" constant="-123" id="Qrr-ua-WG4"/>
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="TR5-xT-C32"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="kfi-82-gxx" secondAttribute="bottom" constant="30" id="XTE-ft-utQ"/>
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="esC-l7-ibT"/>
                             <constraint firstItem="kfi-82-gxx" firstAttribute="top" secondItem="8MY-tJ-mWK" secondAttribute="bottom" constant="25" id="gtC-PO-QUo"/>
-                            <constraint firstItem="DnG-EC-EHY" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="64" id="ix3-x0-GOq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DnG-EC-EHY" secondAttribute="trailing" constant="56" id="jqK-DU-apo"/>
+                            <constraint firstItem="DnG-EC-EHY" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="117" id="ix3-x0-GOq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DnG-EC-EHY" secondAttribute="trailing" constant="161" id="jqK-DU-apo"/>
                             <constraint firstItem="kfi-82-gxx" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="kbe-Mq-NkJ"/>
                         </constraints>
                     </view>

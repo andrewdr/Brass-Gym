@@ -24,24 +24,30 @@ class FirstViewController: UIViewController {
     @IBAction func majorSwitch(_ sender: UISwitch) {
         if majSwitchValue.isOn{
             addMajors()
+        }else{
+        removeMajors()
         }
     }
     @IBAction func minorSwitch(_ sender: UISwitch) {
         if minorOnlySwitch.isOn{
         addMinors()
         }else{
-            
+        removeMinors()
         }
     }
     @IBAction func modesSwitch(_ sender: UISwitch) {
         if modesOnlySwitch.isOn{
         addModes()
+        }else{
+        removeModes()
         }
     }
     
     @IBAction func symmetricSwitch(_ sender: UISwitch) {
         if symmetricOnlySwitch.isOn{
         addSymmetrics()
+        }else{
+        removeSymmetrics()
         }
     }
 
