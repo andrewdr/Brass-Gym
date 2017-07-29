@@ -14,6 +14,8 @@ class FourthViewController: UIViewController {
     @IBOutlet weak var tempoDisplay: UILabel!
     @IBOutlet weak var tempoStepper: UIStepper!
     @IBOutlet weak var startStopBtnTxt: UIButton!
+    
+
 
     
     var metTimer: Timer!
@@ -51,6 +53,10 @@ class FourthViewController: UIViewController {
         metTimer?.fire()
         startStopBtnTxt.setTitle("Stop", for: .normal)
         tempoStepper.isEnabled = false
+        
+    
+        UIApplication.shared.isIdleTimerDisabled = true
+        
     }
     
     func stopMet(){
@@ -59,6 +65,7 @@ class FourthViewController: UIViewController {
         metTimer?.invalidate()
         startStopBtnTxt.setTitle("Start", for: .normal)
         tempoStepper.isEnabled = true
+        UIApplication.shared.isIdleTimerDisabled = false
     }
 
     func playSound(){
