@@ -19,6 +19,12 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var symmetricOnlySwitch: UISwitch!
 
     var sendScale = "Scale 1"
+    
+    
+    @IBAction func scaleDetailBtn(_ sender: Any) {
+        
+        
+    }
 
 
     @IBAction func majorSwitch(_ sender: UISwitch) {
