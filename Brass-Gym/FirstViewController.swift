@@ -101,7 +101,17 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "scaleDetail"{
+            let ScaleDetail = segue.destination as! ScaleDetailVC
+            ScaleDetail.receivedScale = scaleTypeLabel.text!
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -111,4 +121,18 @@ class FirstViewController: UIViewController {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
