@@ -25,7 +25,6 @@ var selectedScales:[String] = []
 var flatMapScales:[String] = []
 
 
-
 func addMajors(){
     selectedScales.append(contentsOf: majorScales)
 }

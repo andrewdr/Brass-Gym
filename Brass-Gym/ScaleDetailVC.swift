@@ -14,8 +14,23 @@ class ScaleDetailVC: UIViewController {
     
     
     @IBOutlet weak var scaleType: UILabel!
+    @IBOutlet weak var scaleImage: UIImageView!
     
-
+    func getScaleImage(){
+        
+        if receivedScale == majorScales[0]{
+            scaleImage.image = #imageLiteral(resourceName: "c-major")
+        }else if receivedScale == minorScales[0] {
+            scaleImage.image = #imageLiteral(resourceName: "c-natural-minor")
+        }else if receivedScale == minorScales[1]{
+            scaleImage.image = #imageLiteral(resourceName: "c-harmonic-minor")
+        }else if receivedScale == minorScales[2]{
+            scaleImage.image = #imageLiteral(resourceName: "c-melodic-minor")
+        }else{
+            scaleImage.image = #imageLiteral(resourceName: "c-major")
+        }
+        
+    }
     
     
 
@@ -23,7 +38,7 @@ class ScaleDetailVC: UIViewController {
         super.viewDidLoad()
 
         scaleType.text = receivedScale
-        
+        getScaleImage()
         
     }
 
