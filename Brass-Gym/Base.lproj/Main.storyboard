@@ -497,22 +497,31 @@ whole, whole, half, whole, whole, whole, half</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Diamond-bowtie" translatesAutoresizingMaskIntoConstraints="NO" id="izX-e9-xcI">
+                                <rect key="frame" x="16" y="103" width="343" height="188"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6hz-wL-fX8" firstAttribute="top" secondItem="izX-e9-xcI" secondAttribute="bottom" constant="31" id="2qy-KW-fSp"/>
                             <constraint firstItem="6Fa-NX-Ah6" firstAttribute="centerX" secondItem="Jh1-wL-mdV" secondAttribute="centerX" id="71k-Fg-8ee"/>
                             <constraint firstItem="Cbh-MQ-3RY" firstAttribute="centerX" secondItem="Jh1-wL-mdV" secondAttribute="centerX" id="GlR-tV-dKu"/>
                             <constraint firstItem="icp-pr-ZJI" firstAttribute="centerX" secondItem="Jh1-wL-mdV" secondAttribute="centerX" id="Jen-o9-Hub"/>
                             <constraint firstItem="icp-pr-ZJI" firstAttribute="top" secondItem="6hz-wL-fX8" secondAttribute="bottom" constant="145" id="NMJ-Wk-KLB"/>
+                            <constraint firstItem="izX-e9-xcI" firstAttribute="centerX" secondItem="Jh1-wL-mdV" secondAttribute="centerX" id="WoG-PO-wfG"/>
                             <constraint firstItem="6Fa-NX-Ah6" firstAttribute="top" secondItem="icp-pr-ZJI" secondAttribute="bottom" constant="12" id="eML-yd-ces"/>
                             <constraint firstItem="Cbh-MQ-3RY" firstAttribute="top" secondItem="bHa-O9-2ye" secondAttribute="bottom" constant="8" id="fCU-AI-9o0"/>
                             <constraint firstItem="6hz-wL-fX8" firstAttribute="centerX" secondItem="Jh1-wL-mdV" secondAttribute="centerX" id="hY4-fy-D9r"/>
+                            <constraint firstItem="izX-e9-xcI" firstAttribute="trailing" secondItem="Jh1-wL-mdV" secondAttribute="trailingMargin" id="iCR-Du-Dk9"/>
                             <constraint firstItem="r0S-ca-XEe" firstAttribute="top" secondItem="6Fa-NX-Ah6" secondAttribute="bottom" constant="30" id="n2B-n6-9GQ"/>
+                            <constraint firstItem="izX-e9-xcI" firstAttribute="top" secondItem="Cbh-MQ-3RY" secondAttribute="bottom" constant="33" id="q0Y-XL-rhl"/>
+                            <constraint firstItem="izX-e9-xcI" firstAttribute="leading" secondItem="Jh1-wL-mdV" secondAttribute="leadingMargin" id="tye-bM-YDc"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dynamics" image="second" id="MEq-2M-CkF"/>
                     <connections>
                         <outlet property="dynamicDisplay" destination="6hz-wL-fX8" id="mOK-5B-HxJ"/>
+                        <outlet property="dynamicsImage" destination="izX-e9-xcI" id="Tsf-bs-8iw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjM-Sw-Z0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -650,6 +659,7 @@ whole, whole, half, whole, whole, whole, half</string>
         </scene>
     </scenes>
     <resources>
+        <image name="Diamond-bowtie" width="500" height="289"/>
         <image name="c-major" width="500" height="110"/>
         <image name="scale-tab-icon2" width="30" height="40"/>
         <image name="second" width="30" height="30"/>
