@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 let notes:[String] = ["A", "A♭", "B", "B♭", "C", "C♯", "D", "D♭", "E", "E♭", "F", "F♯", "G", "G♭"]
 
@@ -17,13 +18,15 @@ let majorScales:[String] = ["Major"]
 let minorScales:[String] = ["Natural Minor", "Harmonic Minor", "Melodic Minor"]
 
 let modalScales:[String] = ["Dorian", "Phrygian", "Lydian","Lydian Dominant", "Mixolydian", "Locrian"]
+var modalImages:[UIImage] = [#imageLiteral(resourceName: "c-dorian"), #imageLiteral(resourceName: "c-phrygian"), #imageLiteral(resourceName: "c-lydian"), #imageLiteral(resourceName: "c-lydian-dominnat"), #imageLiteral(resourceName: "c-mixolydian"), #imageLiteral(resourceName: "c-locrian")]
 
 let symmetricScales:[String] = ["Octatonic(W)", "Octatonic(H)", "Chromatic(up)", "Chromatic(down)", "Whole Tone"]
+
+
 
 var selectedScales:[String] = []
 
 var flatMapScales:[String] = []
-
 
 func addMajors(){
     selectedScales.append(contentsOf: majorScales)

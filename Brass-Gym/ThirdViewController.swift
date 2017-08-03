@@ -35,7 +35,7 @@ class ThirdViewController: UIViewController {
             dynamicsImage.isHidden = false
         }else{
             dynamicsImage.isHidden = true
-        }
+        } 
     }
     
 
