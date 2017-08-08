@@ -541,30 +541,14 @@ whole, whole, half, whole, whole, whole, half</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zdZ-xa-vIs">
-                                <rect key="frame" x="140" y="559" width="94" height="29"/>
+                                <rect key="frame" x="140" y="319" width="94" height="29"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <action selector="selectTempo:" destination="CfP-f3-8uR" eventType="valueChanged" id="2IQ-OV-Un1"/>
                                 </connections>
                             </stepper>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2f9-1C-Ys3">
-                                <rect key="frame" x="140" y="504" width="94" height="47"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="HOg-Zw-XPV"/>
-                                    <constraint firstAttribute="width" constant="94" id="JMS-qu-4YY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jv4-DE-Omw">
-                                <rect key="frame" x="242" y="504" width="117" height="84"/>
+                                <rect key="frame" x="242" y="319" width="117" height="84"/>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.1137254902" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="qDK-Ku-njA"/>
@@ -592,17 +576,33 @@ whole, whole, half, whole, whole, whole, half</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2f9-1C-Ys3">
+                                <rect key="frame" x="16" y="106" width="343" height="163"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="163" id="HOg-Zw-XPV"/>
+                                    <constraint firstAttribute="width" constant="343" id="JMS-qu-4YY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="140"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2f9-1C-Ys3" firstAttribute="centerX" secondItem="eKE-bH-NhG" secondAttribute="centerX" id="8WW-e2-hT2"/>
                             <constraint firstItem="KYu-qR-f9f" firstAttribute="centerX" secondItem="eKE-bH-NhG" secondAttribute="centerX" id="ACE-8R-Ktw"/>
-                            <constraint firstItem="zdZ-xa-vIs" firstAttribute="top" secondItem="2f9-1C-Ys3" secondAttribute="bottom" constant="8" id="DoM-Fk-Q7N"/>
+                            <constraint firstItem="zdZ-xa-vIs" firstAttribute="top" secondItem="2f9-1C-Ys3" secondAttribute="bottom" constant="50" id="DoM-Fk-Q7N"/>
                             <constraint firstItem="KYu-qR-f9f" firstAttribute="top" secondItem="aC9-IK-pWw" secondAttribute="bottom" constant="8" id="Lae-jS-miM"/>
-                            <constraint firstItem="Jv4-DE-Omw" firstAttribute="leading" secondItem="2f9-1C-Ys3" secondAttribute="trailing" constant="8" id="RvF-0M-zOR"/>
-                            <constraint firstItem="efD-yO-aRz" firstAttribute="top" secondItem="Jv4-DE-Omw" secondAttribute="bottom" constant="30" id="o6Q-0C-CJg"/>
+                            <constraint firstItem="Jv4-DE-Omw" firstAttribute="leading" secondItem="2f9-1C-Ys3" secondAttribute="trailing" constant="-117" id="RvF-0M-zOR"/>
+                            <constraint firstItem="efD-yO-aRz" firstAttribute="top" secondItem="Jv4-DE-Omw" secondAttribute="bottom" constant="215" id="o6Q-0C-CJg"/>
                             <constraint firstItem="Jv4-DE-Omw" firstAttribute="trailing" secondItem="eKE-bH-NhG" secondAttribute="trailingMargin" id="o9Y-KC-ZO1"/>
-                            <constraint firstItem="efD-yO-aRz" firstAttribute="top" secondItem="zdZ-xa-vIs" secondAttribute="bottom" constant="30" id="wzo-e9-JXt"/>
+                            <constraint firstItem="efD-yO-aRz" firstAttribute="top" secondItem="zdZ-xa-vIs" secondAttribute="bottom" constant="270" id="wzo-e9-JXt"/>
                             <constraint firstItem="zdZ-xa-vIs" firstAttribute="centerX" secondItem="eKE-bH-NhG" secondAttribute="centerX" id="y74-jv-Af5"/>
                         </constraints>
                     </view>

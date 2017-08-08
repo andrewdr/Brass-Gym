@@ -19,6 +19,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var symmetricOnlySwitch: UISwitch!
 
     var sendScale = "Scale 1"
+    var scaleImage: UIImage?
     
     
     @IBAction func scaleDetailBtn(_ sender: Any) {
@@ -30,22 +31,28 @@ class FirstViewController: UIViewController {
     @IBAction func majorSwitch(_ sender: UISwitch) {
         if majSwitchValue.isOn{
             addMajors()
+            addMajImg()
         }else{
         removeMajors()
+        removeMajImg()
         }
     }
     @IBAction func minorSwitch(_ sender: UISwitch) {
         if minorOnlySwitch.isOn{
         addMinors()
+        addMinorImg()
         }else{
         removeMinors()
+        removeMinorImg()
         }
     }
     @IBAction func modesSwitch(_ sender: UISwitch) {
         if modesOnlySwitch.isOn{
         addModes()
+        addModalImg()
         }else{
         removeModes()
+        removeModalImg()
         }
     }
     
@@ -89,12 +96,14 @@ class FirstViewController: UIViewController {
         
         if selectedScales == []{
             scaleTypeLabel.text = majorScales[0]
+            scaleImage = #imageLiteral(resourceName: "c-major")
         }else{
         
         flatMapScales = selectedScales.flatMap({$0})
         randomScaleType = Int(arc4random_uniform(UInt32(flatMapScales.count)))
         scaleTypeLabel.text = flatMapScales[randomScaleType]
-        }
+            
+        } 
     }
 
     
@@ -110,6 +119,7 @@ class FirstViewController: UIViewController {
         if segue.identifier == "scaleDetail"{
             let ScaleDetail = segue.destination as! ScaleDetailVC
             ScaleDetail.receivedScale = scaleTypeLabel.text!
+            ScaleDetail.receivedImg = scaleImage!
         }
         
     }
