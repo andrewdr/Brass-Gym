@@ -592,16 +592,22 @@ whole, whole, half, whole, whole, whole, half</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="J4m-k0-hfv">
+                                <rect key="frame" x="60" y="443" width="254" height="31"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="J4m-k0-hfv" firstAttribute="centerX" secondItem="eKE-bH-NhG" secondAttribute="centerX" id="5CR-ff-U4N"/>
                             <constraint firstItem="2f9-1C-Ys3" firstAttribute="centerX" secondItem="eKE-bH-NhG" secondAttribute="centerX" id="8WW-e2-hT2"/>
                             <constraint firstItem="KYu-qR-f9f" firstAttribute="centerX" secondItem="eKE-bH-NhG" secondAttribute="centerX" id="ACE-8R-Ktw"/>
                             <constraint firstItem="zdZ-xa-vIs" firstAttribute="top" secondItem="2f9-1C-Ys3" secondAttribute="bottom" constant="50" id="DoM-Fk-Q7N"/>
                             <constraint firstItem="KYu-qR-f9f" firstAttribute="top" secondItem="aC9-IK-pWw" secondAttribute="bottom" constant="8" id="Lae-jS-miM"/>
                             <constraint firstItem="Jv4-DE-Omw" firstAttribute="leading" secondItem="2f9-1C-Ys3" secondAttribute="trailing" constant="-117" id="RvF-0M-zOR"/>
+                            <constraint firstItem="J4m-k0-hfv" firstAttribute="leading" secondItem="eKE-bH-NhG" secondAttribute="leadingMargin" constant="46" id="TMW-Gb-FO5"/>
                             <constraint firstItem="efD-yO-aRz" firstAttribute="top" secondItem="Jv4-DE-Omw" secondAttribute="bottom" constant="215" id="o6Q-0C-CJg"/>
                             <constraint firstItem="Jv4-DE-Omw" firstAttribute="trailing" secondItem="eKE-bH-NhG" secondAttribute="trailingMargin" id="o9Y-KC-ZO1"/>
+                            <constraint firstItem="J4m-k0-hfv" firstAttribute="top" secondItem="Jv4-DE-Omw" secondAttribute="bottom" constant="40" id="oyL-dN-9fz"/>
                             <constraint firstItem="efD-yO-aRz" firstAttribute="top" secondItem="zdZ-xa-vIs" secondAttribute="bottom" constant="270" id="wzo-e9-JXt"/>
                             <constraint firstItem="zdZ-xa-vIs" firstAttribute="centerX" secondItem="eKE-bH-NhG" secondAttribute="centerX" id="y74-jv-Af5"/>
                         </constraints>
