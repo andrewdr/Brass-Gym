@@ -12,8 +12,8 @@ import AVFoundation
 class FourthViewController: UIViewController {
     
     @IBOutlet weak var tempoDisplay: UILabel!
-    @IBOutlet weak var tempoStepper: UIStepper!
     @IBOutlet weak var startStopBtnTxt: UIButton!
+    @IBOutlet weak var tempoSlider: UISlider!
     
 
 
@@ -24,17 +24,20 @@ class FourthViewController: UIViewController {
 
     var tempo: TimeInterval = 60 {
         didSet{
-            tempoStepper.value = Double(tempo)
+            tempoSlider.value = Float(tempo)
             tempoDisplay.text = String(Int(tempo))
         }
     }
     
-    @IBAction func selectTempo(_ sender: UIStepper) {
-        tempoStepper.minimumValue = 0.0
-        tempoStepper.maximumValue = 250.0
-        tempo = tempoStepper.value
-        }
-
+    
+    @IBAction func newTempo(_ sender: UISlider) {
+        
+        tempoSlider.minimumValue = 50
+        tempoSlider.maximumValue = 180
+        tempo = TimeInterval(tempoSlider.value)
+    }
+    
+    
     @IBAction func startStopBtn(_ sender: UIButton) {
         
         if metIsOff{
@@ -52,7 +55,7 @@ class FourthViewController: UIViewController {
         metTimer = Timer.scheduledTimer(timeInterval: metTimeInterval, target: self, selector: #selector(FourthViewController.playSound), userInfo: nil, repeats: true)
         metTimer?.fire()
         startStopBtnTxt.setTitle("Stop", for: .normal)
-        tempoStepper.isEnabled = false
+
         
     
         UIApplication.shared.isIdleTimerDisabled = true
@@ -64,7 +67,6 @@ class FourthViewController: UIViewController {
         metIsOff = true
         metTimer?.invalidate()
         startStopBtnTxt.setTitle("Start", for: .normal)
-        tempoStepper.isEnabled = true
         UIApplication.shared.isIdleTimerDisabled = false
     }
 
@@ -74,8 +76,14 @@ class FourthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+  
         tempo = 100
+        tempoSlider.value = Float(tempo)
+        tempoSlider.isContinuous = true
+        
+
+        
         let metSoundURL = URL(fileURLWithPath: Bundle.main.path(forResource: "metronomeClick", ofType: "mp3")!)
         metPlayer = try! AVAudioPlayer(contentsOf: metSoundURL)
         metPlayer.prepareToPlay()

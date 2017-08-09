@@ -540,32 +540,6 @@ whole, whole, half, whole, whole, whole, half</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zdZ-xa-vIs">
-                                <rect key="frame" x="140" y="319" width="94" height="29"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <action selector="selectTempo:" destination="CfP-f3-8uR" eventType="valueChanged" id="2IQ-OV-Un1"/>
-                                </connections>
-                            </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jv4-DE-Omw">
-                                <rect key="frame" x="242" y="319" width="117" height="84"/>
-                                <color key="backgroundColor" red="0.93333333330000001" green="0.1137254902" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="84" id="qDK-Ku-njA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="startStopBtn:" destination="CfP-f3-8uR" eventType="touchUpInside" id="0Pg-LJ-akM"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metronome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYu-qR-f9f">
                                 <rect key="frame" x="95" y="28" width="185" height="42"/>
                                 <constraints>
@@ -593,30 +567,50 @@ whole, whole, half, whole, whole, whole, half</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="J4m-k0-hfv">
-                                <rect key="frame" x="60" y="443" width="254" height="31"/>
+                                <rect key="frame" x="14" y="443" width="347" height="31"/>
+                                <connections>
+                                    <action selector="newTempo:" destination="CfP-f3-8uR" eventType="valueChanged" id="VQx-vf-dVh"/>
+                                </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jv4-DE-Omw">
+                                <rect key="frame" x="16" y="277" width="343" height="84"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.1137254902" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="qDK-Ku-njA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startStopBtn:" destination="CfP-f3-8uR" eventType="touchUpInside" id="0Pg-LJ-akM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="J4m-k0-hfv" firstAttribute="centerX" secondItem="eKE-bH-NhG" secondAttribute="centerX" id="5CR-ff-U4N"/>
+                            <constraint firstItem="2f9-1C-Ys3" firstAttribute="top" secondItem="KYu-qR-f9f" secondAttribute="bottom" constant="36" id="6xI-bQ-Kq4"/>
                             <constraint firstItem="2f9-1C-Ys3" firstAttribute="centerX" secondItem="eKE-bH-NhG" secondAttribute="centerX" id="8WW-e2-hT2"/>
                             <constraint firstItem="KYu-qR-f9f" firstAttribute="centerX" secondItem="eKE-bH-NhG" secondAttribute="centerX" id="ACE-8R-Ktw"/>
-                            <constraint firstItem="zdZ-xa-vIs" firstAttribute="top" secondItem="2f9-1C-Ys3" secondAttribute="bottom" constant="50" id="DoM-Fk-Q7N"/>
                             <constraint firstItem="KYu-qR-f9f" firstAttribute="top" secondItem="aC9-IK-pWw" secondAttribute="bottom" constant="8" id="Lae-jS-miM"/>
-                            <constraint firstItem="Jv4-DE-Omw" firstAttribute="leading" secondItem="2f9-1C-Ys3" secondAttribute="trailing" constant="-117" id="RvF-0M-zOR"/>
-                            <constraint firstItem="J4m-k0-hfv" firstAttribute="leading" secondItem="eKE-bH-NhG" secondAttribute="leadingMargin" constant="46" id="TMW-Gb-FO5"/>
-                            <constraint firstItem="efD-yO-aRz" firstAttribute="top" secondItem="Jv4-DE-Omw" secondAttribute="bottom" constant="215" id="o6Q-0C-CJg"/>
+                            <constraint firstItem="Jv4-DE-Omw" firstAttribute="leading" secondItem="2f9-1C-Ys3" secondAttribute="trailing" constant="-343" id="RvF-0M-zOR"/>
+                            <constraint firstItem="J4m-k0-hfv" firstAttribute="leading" secondItem="eKE-bH-NhG" secondAttribute="leadingMargin" id="TMW-Gb-FO5"/>
+                            <constraint firstItem="efD-yO-aRz" firstAttribute="top" secondItem="Jv4-DE-Omw" secondAttribute="bottom" constant="257" id="o6Q-0C-CJg"/>
                             <constraint firstItem="Jv4-DE-Omw" firstAttribute="trailing" secondItem="eKE-bH-NhG" secondAttribute="trailingMargin" id="o9Y-KC-ZO1"/>
-                            <constraint firstItem="J4m-k0-hfv" firstAttribute="top" secondItem="Jv4-DE-Omw" secondAttribute="bottom" constant="40" id="oyL-dN-9fz"/>
-                            <constraint firstItem="efD-yO-aRz" firstAttribute="top" secondItem="zdZ-xa-vIs" secondAttribute="bottom" constant="270" id="wzo-e9-JXt"/>
-                            <constraint firstItem="zdZ-xa-vIs" firstAttribute="centerX" secondItem="eKE-bH-NhG" secondAttribute="centerX" id="y74-jv-Af5"/>
+                            <constraint firstItem="J4m-k0-hfv" firstAttribute="top" secondItem="Jv4-DE-Omw" secondAttribute="bottom" constant="82" id="oyL-dN-9fz"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Metronome" image="second" selectedImage="second" id="z5D-85-PVz"/>
                     <connections>
                         <outlet property="startStopBtnTxt" destination="Jv4-DE-Omw" id="wbN-Y2-LUf"/>
                         <outlet property="tempoDisplay" destination="2f9-1C-Ys3" id="P0C-CJ-g6d"/>
-                        <outlet property="tempoStepper" destination="zdZ-xa-vIs" id="jso-d2-sEo"/>
+                        <outlet property="tempoSlider" destination="J4m-k0-hfv" id="kuw-Bs-GKN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oVQ-yb-ofi" userLabel="First Responder" sceneMemberID="firstResponder"/>
