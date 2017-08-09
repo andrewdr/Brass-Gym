@@ -55,6 +55,7 @@ class FourthViewController: UIViewController {
         metTimer = Timer.scheduledTimer(timeInterval: metTimeInterval, target: self, selector: #selector(FourthViewController.playSound), userInfo: nil, repeats: true)
         metTimer?.fire()
         startStopBtnTxt.setTitle("Stop", for: .normal)
+        tempoSlider.isEnabled = false
 
         
     
@@ -68,6 +69,7 @@ class FourthViewController: UIViewController {
         metTimer?.invalidate()
         startStopBtnTxt.setTitle("Start", for: .normal)
         UIApplication.shared.isIdleTimerDisabled = false
+        tempoSlider.isEnabled = true
     }
 
     func playSound(){
@@ -80,7 +82,7 @@ class FourthViewController: UIViewController {
   
         tempo = 100
         tempoSlider.value = Float(tempo)
-        tempoSlider.isContinuous = true
+
         
 
         
