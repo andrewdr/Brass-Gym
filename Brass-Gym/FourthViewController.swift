@@ -29,6 +29,8 @@ class FourthViewController: UIViewController {
         }
     }
     
+
+    
     
     @IBAction func newTempo(_ sender: UISlider) {
         
@@ -56,10 +58,19 @@ class FourthViewController: UIViewController {
         metTimer?.fire()
         startStopBtnTxt.setTitle("Stop", for: .normal)
         tempoSlider.isEnabled = false
+        UIApplication.shared.isIdleTimerDisabled = true
+        
+        do{
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            print("An error occured")
+        }
+        
 
         
     
-        UIApplication.shared.isIdleTimerDisabled = true
+        
         
     }
     
