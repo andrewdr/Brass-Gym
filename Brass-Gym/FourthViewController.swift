@@ -34,7 +34,7 @@ class FourthViewController: UIViewController {
     
     @IBAction func newTempo(_ sender: UISlider) {
         
-        tempoSlider.minimumValue = 50
+        tempoSlider.minimumValue = 30
         tempoSlider.maximumValue = 180
         tempo = TimeInterval(tempoSlider.value)
     }
