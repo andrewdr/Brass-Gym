@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D306A6491F2017D900AFEF6A /* ScaleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D306A6481F2017D900AFEF6A /* ScaleDetailVC.swift */; };
 		D31A766F1F1DD4A4004E5D89 /* metronomeClick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D31A766E1F1DD4A4004E5D89 /* metronomeClick.mp3 */; };
-		D321A46A1F36612800643811 /* ScaleImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321A4691F36612800643811 /* ScaleImages.swift */; };
 		D39A78751F12864E00C265BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A78741F12864E00C265BA /* AppDelegate.swift */; };
 		D39A78771F12864E00C265BA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A78761F12864E00C265BA /* FirstViewController.swift */; };
 		D39A78791F12864E00C265BA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A78781F12864E00C265BA /* SecondViewController.swift */; };
@@ -46,7 +45,6 @@
 /* Begin PBXFileReference section */
 		D306A6481F2017D900AFEF6A /* ScaleDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScaleDetailVC.swift; path = "Brass-Gym/ScaleDetailVC.swift"; sourceTree = "<group>"; };
 		D31A766E1F1DD4A4004E5D89 /* metronomeClick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = metronomeClick.mp3; sourceTree = "<group>"; };
-		D321A4691F36612800643811 /* ScaleImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleImages.swift; sourceTree = "<group>"; };
 		D39A78711F12864E00C265BA /* Brass-Gym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brass-Gym.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39A78741F12864E00C265BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D39A78761F12864E00C265BA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 				D3B7C9021F1AE9B900AEF11A /* FourthViewController.swift */,
 				D3CCEF711F188D0200C17AC6 /* ThirdViewController.swift */,
 				D39A78A81F12FCD900C265BA /* FlexTypes.swift */,
-				D321A4691F36612800643811 /* ScaleImages.swift */,
 				D39A78A41F128C8700C265BA /* ScaleTypes.swift */,
 				D3CCEF6F1F188B5300C17AC6 /* Dynamics.swift */,
 				D39A787D1F12864E00C265BA /* Assets.xcassets */,
@@ -302,7 +299,6 @@
 				D39A78A51F128C8700C265BA /* ScaleTypes.swift in Sources */,
 				D39A78791F12864E00C265BA /* SecondViewController.swift in Sources */,
 				D3B7C9031F1AE9B900AEF11A /* FourthViewController.swift in Sources */,
-				D321A46A1F36612800643811 /* ScaleImages.swift in Sources */,
 				D39A78751F12864E00C265BA /* AppDelegate.swift in Sources */,
 				D3E9330F1F1347090042E075 /* Errors.swift in Sources */,
 				D306A6491F2017D900AFEF6A /* ScaleDetailVC.swift in Sources */,
