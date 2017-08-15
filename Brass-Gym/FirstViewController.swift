@@ -31,28 +31,28 @@ class FirstViewController: UIViewController {
     @IBAction func majorSwitch(_ sender: UISwitch) {
         if majSwitchValue.isOn{
             addMajors()
-            addMajImg()
+ 
         }else{
         removeMajors()
-        removeMajImg()
+ 
         }
     }
     @IBAction func minorSwitch(_ sender: UISwitch) {
         if minorOnlySwitch.isOn{
         addMinors()
-        addMinorImg()
+
         }else{
         removeMinors()
-        removeMinorImg()
+
         }
     }
     @IBAction func modesSwitch(_ sender: UISwitch) {
         if modesOnlySwitch.isOn{
         addModes()
-        addModalImg()
+
         }else{
         removeModes()
-        removeModalImg()
+
         }
     }
     
