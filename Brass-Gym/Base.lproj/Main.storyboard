@@ -221,7 +221,7 @@
             </objects>
             <point key="canvasLocation" x="1688.8" y="-320.68965517241384"/>
         </scene>
-        <!--Scale DetailVC-->
+        <!--Scale Info-->
         <scene sceneID="pTl-3L-Yw8">
             <objects>
                 <viewController id="mTx-cu-IHu" customClass="ScaleDetailVC" customModule="Brass_Gym" customModuleProvider="target" sceneMemberID="viewController">
@@ -268,6 +268,7 @@ whole, whole, half, whole, whole, whole, half</string>
                             <constraint firstItem="dKP-YI-Vxj" firstAttribute="top" secondItem="XO0-S6-GI7" secondAttribute="bottom" constant="53" id="zt3-Ne-1gy"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Scale Info" id="Muc-e4-QtQ"/>
                     <connections>
                         <outlet property="scaleImage" destination="XO0-S6-GI7" id="Buy-g9-QhV"/>
                         <outlet property="scaleType" destination="r9r-hx-C6g" id="qzp-k1-neV"/>
