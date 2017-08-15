@@ -119,7 +119,6 @@ class FirstViewController: UIViewController {
         if segue.identifier == "scaleDetail"{
             let ScaleDetail = segue.destination as! ScaleDetailVC
             ScaleDetail.receivedScale = scaleTypeLabel.text!
-            ScaleDetail.receivedImg = scaleImage!
         }
         
     }

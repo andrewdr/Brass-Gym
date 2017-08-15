@@ -11,7 +11,7 @@ import UIKit
 class ScaleDetailVC: UIViewController {
     
     var receivedScale = "scale"
-    var receivedImg: UIImage?
+
     
     
     @IBOutlet weak var scaleType: UILabel!
@@ -52,7 +52,6 @@ class ScaleDetailVC: UIViewController {
         
 
         scaleType.text = receivedScale
-        //scaleImage.image = receivedImg
         getScaleImage()
         
     }
