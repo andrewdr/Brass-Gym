@@ -66,12 +66,6 @@ class FourthViewController: UIViewController {
         } catch {
             print("An error occured")
         }
-        
-
-        
-    
-        
-        
     }
     
     func stopMet(){
