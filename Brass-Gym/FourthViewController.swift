@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 
+
 class FourthViewController: UIViewController {
     
     @IBOutlet weak var tempoDisplay: UILabel!
@@ -16,46 +17,45 @@ class FourthViewController: UIViewController {
     @IBOutlet weak var tempoSlider: UISlider!
     
 
-
-    
     var metTimer: Timer!
     var metIsOff = true
     var metPlayer: AVAudioPlayer!
+    var metronome: Metronome = {
+        let highUrl = Bundle.main.url(forResource: "metronomeClick", withExtension: "mp3")!
+        let lowUrl = Bundle.main.url(forResource: "metronomeClick", withExtension: "mp3")!
+        return Metronome(mainClickFile: lowUrl, accentedClickFile: highUrl)
+    }()
 
-    var tempo: TimeInterval = 60 {
-        didSet{
-            tempoSlider.value = Float(tempo)
-            tempoDisplay.text = String(Int(tempo))
+
+    var tempo: Int = 0 {
+        
+        didSet {
+        tempoDisplay.text = String(self.tempo)
         }
     }
-    
-
-    
     
     @IBAction func newTempo(_ sender: UISlider) {
         
         tempoSlider.minimumValue = 30
-        tempoSlider.maximumValue = 180
-        tempo = TimeInterval(tempoSlider.value)
+        tempoSlider.maximumValue = 200
+        tempo = Int(tempoSlider.value)
     }
     
     
     @IBAction func startStopBtn(_ sender: UIButton) {
         
         if metIsOff{
-            startMet()
+             metronome.play(bpm: Double(Float(tempo)))
+             startText()
         }else{
-            stopMet()
+            metronome.stop()
+            stopText()
         }
-        
     }
     
-    func startMet(){
+    func startText(){
     
         metIsOff = false
-        let metTimeInterval: TimeInterval = 60.0 / tempo
-        metTimer = Timer.scheduledTimer(timeInterval: metTimeInterval, target: self, selector: #selector(FourthViewController.playSound), userInfo: nil, repeats: true)
-        metTimer?.fire()
         startStopBtnTxt.setTitle("Stop", for: .normal)
         tempoSlider.isEnabled = false
         UIApplication.shared.isIdleTimerDisabled = true
@@ -68,10 +68,8 @@ class FourthViewController: UIViewController {
         }
     }
     
-    func stopMet(){
-    
+    func stopText(){
         metIsOff = true
-        metTimer?.invalidate()
         startStopBtnTxt.setTitle("Start", for: .normal)
         UIApplication.shared.isIdleTimerDisabled = false
         tempoSlider.isEnabled = true
@@ -81,19 +79,13 @@ class FourthViewController: UIViewController {
         metPlayer.play()
     }
     
-    override func viewDidLoad() {
+       override func viewDidLoad() {
         super.viewDidLoad()
         
   
         tempo = 100
         tempoSlider.value = Float(tempo)
 
-        
-
-        
-        let metSoundURL = URL(fileURLWithPath: Bundle.main.path(forResource: "metronomeClick", ofType: "mp3")!)
-        metPlayer = try! AVAudioPlayer(contentsOf: metSoundURL)
-        metPlayer.prepareToPlay()
 
     }
 
@@ -102,4 +94,4 @@ class FourthViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-}
+    }

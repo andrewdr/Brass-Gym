@@ -22,7 +22,7 @@
 		D3B7C9031F1AE9B900AEF11A /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B7C9021F1AE9B900AEF11A /* FourthViewController.swift */; };
 		D3CCEF701F188B5300C17AC6 /* Dynamics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CCEF6F1F188B5300C17AC6 /* Dynamics.swift */; };
 		D3CCEF721F188D0200C17AC6 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CCEF711F188D0200C17AC6 /* ThirdViewController.swift */; };
-		D3E9330F1F1347090042E075 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E9330E1F1347090042E075 /* Errors.swift */; };
+		D3E98FD71F478A11008D33D8 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E98FD61F478A11008D33D8 /* Metronome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,7 @@
 		D3B7C9021F1AE9B900AEF11A /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		D3CCEF6F1F188B5300C17AC6 /* Dynamics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dynamics.swift; path = ../Dynamics.swift; sourceTree = "<group>"; };
 		D3CCEF711F188D0200C17AC6 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		D3E9330E1F1347090042E075 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = ../Errors.swift; sourceTree = "<group>"; };
+		D3E98FD61F478A11008D33D8 /* Metronome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,12 +117,12 @@
 			isa = PBXGroup;
 			children = (
 				D39A78741F12864E00C265BA /* AppDelegate.swift */,
-				D3E9330E1F1347090042E075 /* Errors.swift */,
 				D39A78761F12864E00C265BA /* FirstViewController.swift */,
 				D39A78781F12864E00C265BA /* SecondViewController.swift */,
 				D39A787A1F12864E00C265BA /* Main.storyboard */,
 				D3B7C9021F1AE9B900AEF11A /* FourthViewController.swift */,
 				D3CCEF711F188D0200C17AC6 /* ThirdViewController.swift */,
+				D3E98FD61F478A11008D33D8 /* Metronome.swift */,
 				D39A78A81F12FCD900C265BA /* FlexTypes.swift */,
 				D39A78A41F128C8700C265BA /* ScaleTypes.swift */,
 				D3CCEF6F1F188B5300C17AC6 /* Dynamics.swift */,
@@ -298,9 +298,9 @@
 				D39A78A91F12FCD900C265BA /* FlexTypes.swift in Sources */,
 				D39A78A51F128C8700C265BA /* ScaleTypes.swift in Sources */,
 				D39A78791F12864E00C265BA /* SecondViewController.swift in Sources */,
+				D3E98FD71F478A11008D33D8 /* Metronome.swift in Sources */,
 				D3B7C9031F1AE9B900AEF11A /* FourthViewController.swift in Sources */,
 				D39A78751F12864E00C265BA /* AppDelegate.swift in Sources */,
-				D3E9330F1F1347090042E075 /* Errors.swift in Sources */,
 				D306A6491F2017D900AFEF6A /* ScaleDetailVC.swift in Sources */,
 				D39A78771F12864E00C265BA /* FirstViewController.swift in Sources */,
 				D3CCEF721F188D0200C17AC6 /* ThirdViewController.swift in Sources */,
