@@ -17,8 +17,27 @@ class Metronome {
     
     init (mainClickFile: URL, accentedClickFile: URL? = nil) {
         
-        audioFileMainClick = try! AVAudioFile(forReading: mainClickFile)
-        audioFileAccentedClick = try! AVAudioFile(forReading: accentedClickFile ?? mainClickFile)
+        var mainFile: AVAudioFile?
+        var accentedFile: AVAudioFile?
+        
+        do{
+            let getMainFile = try AVAudioFile(forReading: mainClickFile)
+            mainFile = getMainFile
+        }catch{
+            print("An error occurred")
+        }
+        
+        audioFileMainClick = mainFile!
+        
+        do{
+            let getAccentFile = try AVAudioFile(forReading: accentedClickFile!)
+            accentedFile = getAccentFile
+        }catch{
+            print("An error occurred")
+        }
+        audioFileAccentedClick = accentedFile!
+        
+//      audioFileAccentedClick = try! AVAudioFile(forReading: accentedClickFile ?? mainClickFile)
         
         audioPlayerNode = AVAudioPlayerNode()
         
