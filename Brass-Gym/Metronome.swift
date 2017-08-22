@@ -14,11 +14,14 @@ class Metronome {
     private var audioFileMainClick:AVAudioFile
     private var audioFileAccentedClick:AVAudioFile
     private var audioEngine:AVAudioEngine
+    private var engineStart: AVAudioEngine?
     
     init (mainClickFile: URL, accentedClickFile: URL? = nil) {
         
         var mainFile: AVAudioFile?
         var accentedFile: AVAudioFile?
+        var enginePrep: AVAudioEngine?
+
         
         do{
             let getMainFile = try AVAudioFile(forReading: mainClickFile)
@@ -26,7 +29,6 @@ class Metronome {
         }catch{
             print("An error occurred")
         }
-        
         audioFileMainClick = mainFile!
         
         do{
@@ -45,7 +47,19 @@ class Metronome {
         audioEngine.attach(self.audioPlayerNode)
         
         audioEngine.connect(audioPlayerNode, to: audioEngine.mainMixerNode, format: audioFileMainClick.processingFormat)
-        try! audioEngine.start()
+//          try! audioEngine.start()
+        
+        do{
+           let getEngine =  try AVAudioEngine(audioEngine.start())
+           enginePrep = getEngine
+            
+        }catch{
+            print("An error occurred")
+        }
+        
+        engineStart = enginePrep
+        
+        
     }
     
     private func generateBuffer(bpm: Double) -> AVAudioPCMBuffer {
