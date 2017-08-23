@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Brass-Gym/Metronome.swift"
-            timestampString = "525071145.280687"
+            timestampString = "525158720.829015"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "init(mainClickFile:accentedClickFile:)"
             landmarkType = "7">
          </BreakpointContent>

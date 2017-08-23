@@ -15,6 +15,8 @@ class Metronome {
     private var audioFileAccentedClick:AVAudioFile
     private var audioEngine:AVAudioEngine
     private var engineStart: AVAudioEngine?
+    private var mainBufferStart: AVAudioFile?
+    private var accentBufferStart: AVAudioFile?
     
     init (mainClickFile: URL, accentedClickFile: URL? = nil) {
         
@@ -64,17 +66,42 @@ class Metronome {
     
     private func generateBuffer(bpm: Double) -> AVAudioPCMBuffer {
         
+        var mainBufferPrep: AVAudioFile?
+        var accentBufferPrep: AVAudioFile?
+        
         audioFileMainClick.framePosition = 0
         audioFileAccentedClick.framePosition = 0
         
         let beatLength = AVAudioFrameCount(audioFileMainClick.processingFormat.sampleRate * 60 / bpm)
         
         let bufferMainClick = AVAudioPCMBuffer(pcmFormat: audioFileMainClick.processingFormat, frameCapacity: beatLength)
-        try! audioFileMainClick.read(into: bufferMainClick)
+//        try! audioFileMainClick.read(into: bufferMainClick)
+        
+        do{
+            let getBufferMain = try AVAudioFile(audioFileMainClick.read(into: bufferMainClick))
+            mainBufferPrep = getBufferMain
+        
+        }catch{
+            print("An error occurred")
+        }
+        
+        mainBufferStart = mainBufferPrep
+        
+        
         bufferMainClick.frameLength = beatLength
         
         let bufferAccentedClick = AVAudioPCMBuffer(pcmFormat: audioFileMainClick.processingFormat, frameCapacity: beatLength)
-        try! audioFileAccentedClick.read(into: bufferAccentedClick)
+//        try! audioFileAccentedClick.read(into: bufferAccentedClick)
+        do{
+            let getBufferAccent = try AVAudioFile(audioFileAccentedClick.read(into: bufferAccentedClick))
+            accentBufferPrep = getBufferAccent
+            
+        }catch{
+            print("An error occurred")
+        }
+        
+            accentBufferStart = accentBufferPrep
+        
         bufferAccentedClick.frameLength = beatLength
         
         let bufferBar = AVAudioPCMBuffer(pcmFormat: audioFileMainClick.processingFormat, frameCapacity: 4 * beatLength)
