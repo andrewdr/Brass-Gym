@@ -11,46 +11,33 @@ import AVFoundation
 class Metronome {
     
     private var audioPlayerNode:AVAudioPlayerNode
-    private var audioFileMainClick:AVAudioFile
+    //private var audioFileMainClick:AVAudioFile
     private var audioFileAccentedClick:AVAudioFile
     private var audioEngine:AVAudioEngine
     private var engineStart: AVAudioEngine?
     private var mainBufferStart: AVAudioFile?
     private var accentBufferStart: AVAudioFile?
     
-    init (mainClickFile: URL, accentedClickFile: URL? = nil) {
+    init (accentedClickFile: URL) {
         
-        var mainFile: AVAudioFile?
         var accentedFile: AVAudioFile?
         var enginePrep: AVAudioEngine?
 
-        
         do{
-            let getMainFile = try AVAudioFile(forReading: mainClickFile)
-            mainFile = getMainFile
-        }catch{
-            print("An error occurred")
-        }
-        audioFileMainClick = mainFile!
-        
-        do{
-            let getAccentFile = try AVAudioFile(forReading: accentedClickFile!)
+            let getAccentFile = try AVAudioFile(forReading: accentedClickFile)
             accentedFile = getAccentFile
         }catch{
             print("An error occurred")
         }
+        
         audioFileAccentedClick = accentedFile!
         
-//      audioFileAccentedClick = try! AVAudioFile(forReading: accentedClickFile ?? mainClickFile)
         
         audioPlayerNode = AVAudioPlayerNode()
-        
         audioEngine = AVAudioEngine()
         audioEngine.attach(self.audioPlayerNode)
-        
-        audioEngine.connect(audioPlayerNode, to: audioEngine.mainMixerNode, format: audioFileMainClick.processingFormat)
-//          try! audioEngine.start()
-        
+        audioEngine.connect(audioPlayerNode, to: audioEngine.mainMixerNode, format: audioFileAccentedClick.processingFormat)
+
         do{
            let getEngine =  try AVAudioEngine(audioEngine.start())
            enginePrep = getEngine
@@ -58,11 +45,14 @@ class Metronome {
         }catch{
             print("An error occurred")
         }
-        
         engineStart = enginePrep
-        
-        
     }
+    
+    
+    
+    
+    
+    
     
     private func generateBuffer(bpm: Double) -> AVAudioPCMBuffer {
         
