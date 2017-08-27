@@ -22,8 +22,8 @@ class FourthViewController: UIViewController {
     var metPlayer: AVAudioPlayer!
     var metronome: Metronome = {
         let highUrl = Bundle.main.url(forResource: "metronomeClick", withExtension: "mp3")!
-        let lowUrl = Bundle.main.url(forResource: "metronomeClick", withExtension: "mp3")!
-        return Metronome(mainClickFile: lowUrl, accentedClickFile: highUrl)
+//        let lowUrl = Bundle.main.url(forResource: "metronomeClick", withExtension: "mp3")!
+        return Metronome(accentedClickFile: highUrl)
     }()
 
 

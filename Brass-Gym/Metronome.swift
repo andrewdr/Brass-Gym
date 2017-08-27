@@ -11,7 +11,6 @@ import AVFoundation
 class Metronome {
     
     private var audioPlayerNode:AVAudioPlayerNode
-    //private var audioFileMainClick:AVAudioFile
     private var audioFileAccentedClick:AVAudioFile
     private var audioEngine:AVAudioEngine
     private var engineStart: AVAudioEngine?
@@ -52,36 +51,17 @@ class Metronome {
     
     
     
-    
-    
     private func generateBuffer(bpm: Double) -> AVAudioPCMBuffer {
         
-        var mainBufferPrep: AVAudioFile?
+
         var accentBufferPrep: AVAudioFile?
-        
-        audioFileMainClick.framePosition = 0
+
         audioFileAccentedClick.framePosition = 0
         
-        let beatLength = AVAudioFrameCount(audioFileMainClick.processingFormat.sampleRate * 60 / bpm)
-        
-        let bufferMainClick = AVAudioPCMBuffer(pcmFormat: audioFileMainClick.processingFormat, frameCapacity: beatLength)
-//        try! audioFileMainClick.read(into: bufferMainClick)
-        
-        do{
-            let getBufferMain = try AVAudioFile(audioFileMainClick.read(into: bufferMainClick))
-            mainBufferPrep = getBufferMain
-        
-        }catch{
-            print("An error occurred")
-        }
-        
-        mainBufferStart = mainBufferPrep
+        let beatLength = AVAudioFrameCount(audioFileAccentedClick.processingFormat.sampleRate * 60 / bpm)
         
         
-        bufferMainClick.frameLength = beatLength
-        
-        let bufferAccentedClick = AVAudioPCMBuffer(pcmFormat: audioFileMainClick.processingFormat, frameCapacity: beatLength)
-//        try! audioFileAccentedClick.read(into: bufferAccentedClick)
+        let bufferAccentedClick = AVAudioPCMBuffer(pcmFormat: audioFileAccentedClick.processingFormat, frameCapacity: beatLength)
         do{
             let getBufferAccent = try AVAudioFile(audioFileAccentedClick.read(into: bufferAccentedClick))
             accentBufferPrep = getBufferAccent
@@ -89,37 +69,37 @@ class Metronome {
         }catch{
             print("An error occurred")
         }
-        
-            accentBufferStart = accentBufferPrep
-        
+        accentBufferStart = accentBufferPrep
         bufferAccentedClick.frameLength = beatLength
         
-        let bufferBar = AVAudioPCMBuffer(pcmFormat: audioFileMainClick.processingFormat, frameCapacity: 4 * beatLength)
+        
+        
+        let bufferBar = AVAudioPCMBuffer(pcmFormat: audioFileAccentedClick.processingFormat, frameCapacity: 4 * beatLength)
         bufferBar.frameLength = 4 * beatLength
         
         // don't forget if we have two or more channels then we have to multiply memory pointee at channels count
         let accentedClickArray = Array(
             UnsafeBufferPointer(start: bufferAccentedClick.floatChannelData?[0],
-                                count:Int(audioFileMainClick.processingFormat.channelCount) * Int(beatLength))
+                                count:Int(audioFileAccentedClick.processingFormat.channelCount) * Int(beatLength))
         )
-        let mainClickArray = Array(
-            UnsafeBufferPointer(start: bufferMainClick.floatChannelData?[0],
-                                count:Int(audioFileMainClick.processingFormat.channelCount) * Int(beatLength))
-        )
+        
         
         var barArray = Array<Float>()
         // one time for first beat
-        barArray.append(contentsOf: accentedClickArray)
+//        barArray.append(contentsOf: accentedClickArray)
         // three times for regular clicks
-        for _ in 1...3 {
-            barArray.append(contentsOf: mainClickArray)
+        for _ in 1...4 {
+            barArray.append(contentsOf: accentedClickArray)
         }
         
         bufferBar.floatChannelData?.pointee.assign(from: barArray,
-                                                   count: Int(audioFileMainClick.processingFormat.channelCount) * Int(bufferBar.frameLength))
-        
+                                                   count: Int(audioFileAccentedClick.processingFormat.channelCount) * Int(bufferBar.frameLength))
         return bufferBar
     }
+    
+    
+    
+    
     
     func play(bpm: Double) {
         
