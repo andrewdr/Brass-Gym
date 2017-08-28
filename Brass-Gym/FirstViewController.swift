@@ -20,6 +20,7 @@ class FirstViewController: UIViewController {
 
     var sendScale = "Scale 1"
     var scaleImage: UIImage?
+
     
     
     @IBAction func scaleDetailBtn(_ sender: Any) {
