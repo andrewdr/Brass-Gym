@@ -22,7 +22,6 @@ class FourthViewController: UIViewController {
     var metPlayer: AVAudioPlayer!
     var metronome: Metronome = {
         let highUrl = Bundle.main.url(forResource: "metronomeClick", withExtension: "mp3")!
-//        let lowUrl = Bundle.main.url(forResource: "metronomeClick", withExtension: "mp3")!
         return Metronome(accentedClickFile: highUrl)
     }()
 
@@ -39,6 +38,14 @@ class FourthViewController: UIViewController {
         tempoSlider.minimumValue = 30
         tempoSlider.maximumValue = 200
         tempo = Int(tempoSlider.value)
+    }
+    
+    @IBAction func plusTempo(_ sender: Any) {
+        tempo = tempo + 1
+    }
+    
+    @IBAction func minusTempo(_ sender: Any) {
+        tempo = tempo - 1
     }
     
     
