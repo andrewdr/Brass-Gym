@@ -49,6 +49,8 @@ class ScaleDetailVC: UIViewController {
             scaleImage.image = #imageLiteral(resourceName: "chromatic-up")
         }else if receivedScale == symmetricScales[3]{
             scaleImage.image = #imageLiteral(resourceName: "chromatic-down")
+        }else if receivedScale == symmetricScales[4]{
+            scaleImage.image = #imageLiteral(resourceName: "whole-tone")
         }else{
             scaleImage.image = #imageLiteral(resourceName: "c-major")
         }
