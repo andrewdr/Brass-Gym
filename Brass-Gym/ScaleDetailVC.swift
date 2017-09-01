@@ -27,6 +27,8 @@ class ScaleDetailVC: UIViewController {
             scaleImage.image = #imageLiteral(resourceName: "c-harmonic-minor")
         }else if receivedScale == minorScales[2]{
             scaleImage.image = #imageLiteral(resourceName: "c-melodic-minor")
+        }else if receivedScale == minorScales[3]{
+            scaleImage.image = #imageLiteral(resourceName: "blues")
         }else if receivedScale == modalScales[0]{
             scaleImage.image = #imageLiteral(resourceName: "c-dorian")
         }else if receivedScale == modalScales[1]{
@@ -39,6 +41,10 @@ class ScaleDetailVC: UIViewController {
             scaleImage.image = #imageLiteral(resourceName: "c-mixolydian")
         }else if receivedScale == modalScales[5]{
             scaleImage.image = #imageLiteral(resourceName: "c-locrian")
+        }else if receivedScale == symmetricScales[0]{
+            scaleImage.image = #imageLiteral(resourceName: "octatonic-whole")
+        }else if receivedScale == symmetricScales[1]{
+            scaleImage.image = #imageLiteral(resourceName: "octatonic-half")
         }else if receivedScale == symmetricScales[2]{
             scaleImage.image = #imageLiteral(resourceName: "chromatic-up")
         }else if receivedScale == symmetricScales[3]{
