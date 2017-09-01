@@ -220,10 +220,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="c-major" translatesAutoresizingMaskIntoConstraints="NO" id="XO0-S6-GI7">
-                                <rect key="frame" x="16" y="144" width="343" height="110"/>
+                                <rect key="frame" x="16" y="135.5" width="343" height="110"/>
                             </imageView>
                             <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dKP-YI-Vxj">
-                                <rect key="frame" x="16" y="307" width="343" height="213"/>
+                                <rect key="frame" x="16" y="298.5" width="343" height="221.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">A major scale is a diatonic scale. The sequence of intervals between the notes of a major scale is:
 
@@ -232,8 +232,8 @@ whole, whole, half, whole, whole, whole, half</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scale Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9r-hx-C6g">
-                                <rect key="frame" x="16" y="72" width="343" height="41.5"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <rect key="frame" x="16" y="81" width="343" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -246,10 +246,10 @@ whole, whole, half, whole, whole, whole, half</string>
                             <constraint firstItem="dKP-YI-Vxj" firstAttribute="trailing" secondItem="E1A-1v-eg7" secondAttribute="trailingMargin" id="SWZ-WB-HRt"/>
                             <constraint firstItem="XO0-S6-GI7" firstAttribute="leading" secondItem="E1A-1v-eg7" secondAttribute="leadingMargin" id="TVJ-rW-Pym"/>
                             <constraint firstItem="Blo-O2-8uy" firstAttribute="top" secondItem="dKP-YI-Vxj" secondAttribute="bottom" constant="98" id="beD-mf-4Wk"/>
-                            <constraint firstItem="XO0-S6-GI7" firstAttribute="top" secondItem="r9r-hx-C6g" secondAttribute="bottom" constant="30.5" id="hPW-Fg-gHU"/>
+                            <constraint firstItem="XO0-S6-GI7" firstAttribute="top" secondItem="r9r-hx-C6g" secondAttribute="bottom" constant="21.5" id="hPW-Fg-gHU"/>
                             <constraint firstItem="r9r-hx-C6g" firstAttribute="trailing" secondItem="E1A-1v-eg7" secondAttribute="trailingMargin" id="kk8-h6-gDc"/>
                             <constraint firstItem="r9r-hx-C6g" firstAttribute="leading" secondItem="E1A-1v-eg7" secondAttribute="leadingMargin" id="sY3-By-4Ee"/>
-                            <constraint firstItem="r9r-hx-C6g" firstAttribute="top" secondItem="bHZ-6s-AuB" secondAttribute="bottom" constant="8" id="yLo-CA-rIv"/>
+                            <constraint firstItem="r9r-hx-C6g" firstAttribute="top" secondItem="bHZ-6s-AuB" secondAttribute="bottom" constant="17" id="yLo-CA-rIv"/>
                             <constraint firstItem="XO0-S6-GI7" firstAttribute="trailing" secondItem="E1A-1v-eg7" secondAttribute="trailingMargin" id="yoC-bT-vhK"/>
                             <constraint firstItem="dKP-YI-Vxj" firstAttribute="top" secondItem="XO0-S6-GI7" secondAttribute="bottom" constant="53" id="zt3-Ne-1gy"/>
                         </constraints>

@@ -16,7 +16,7 @@ let scaleType:[String] = ["Major", "Natural Minor", "Harmonic Minor", "Melodic M
 let majorScales:[String] = ["Major"]
 
 
-let minorScales:[String] = ["Natural Minor", "Harmonic Minor", "Melodic Minor"]
+let minorScales:[String] = ["Natural Minor", "Harmonic Minor", "Melodic Minor", "Blues"]
 
 
 let modalScales:[String] = ["Dorian", "Phrygian", "Lydian","Lydian Dominant", "Mixolydian", "Locrian"]
