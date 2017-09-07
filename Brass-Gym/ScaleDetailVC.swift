@@ -37,30 +37,38 @@ class ScaleDetailVC: UIViewController {
             scaleText.text = bluesText
         }else if receivedScale == modalScales[0]{
             scaleImage.image = #imageLiteral(resourceName: "c-dorian")
+            scaleText.text = dorianText
         }else if receivedScale == modalScales[1]{
             scaleImage.image = #imageLiteral(resourceName: "c-phrygian")
+            scaleText.text = phrygianText
         }else if receivedScale == modalScales[2]{
             scaleImage.image = #imageLiteral(resourceName: "c-lydian")
+            scaleText.text = lydianText
         }else if receivedScale == modalScales[3]{
             scaleImage.image = #imageLiteral(resourceName: "c-lydian-dominnat")
+            scaleText.text = lydianDomText
         }else if receivedScale == modalScales[4]{
             scaleImage.image = #imageLiteral(resourceName: "c-mixolydian")
+            scaleText.text = mixolydianText
         }else if receivedScale == modalScales[5]{
             scaleImage.image = #imageLiteral(resourceName: "c-locrian")
+            scaleText.text = locrianText
         }else if receivedScale == symmetricScales[0]{
             scaleImage.image = #imageLiteral(resourceName: "octatonic-whole")
+            scaleText.text = octaWholeText
         }else if receivedScale == symmetricScales[1]{
             scaleImage.image = #imageLiteral(resourceName: "octatonic-half")
+            scaleText.text = octaHalfText
         }else if receivedScale == symmetricScales[2]{
             scaleImage.image = #imageLiteral(resourceName: "chromatic-up")
+            scaleText.text = chromaticText
         }else if receivedScale == symmetricScales[3]{
             scaleImage.image = #imageLiteral(resourceName: "chromatic-down")
+            scaleText.text = chromaticText
         }else if receivedScale == symmetricScales[4]{
             scaleImage.image = #imageLiteral(resourceName: "whole-tone")
-        }else{
-            scaleImage.image = #imageLiteral(resourceName: "c-major")
+            scaleText.text = wholeToneText
         }
-        
     }
     
     
