@@ -222,13 +222,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="c-major" translatesAutoresizingMaskIntoConstraints="NO" id="XO0-S6-GI7">
                                 <rect key="frame" x="16" y="135.5" width="343" height="110"/>
                             </imageView>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dKP-YI-Vxj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Scale Text" translatesAutoresizingMaskIntoConstraints="NO" id="dKP-YI-Vxj">
                                 <rect key="frame" x="16" y="298.5" width="343" height="221.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">A major scale is a diatonic scale. The sequence of intervals between the notes of a major scale is:
-
-whole, whole, half, whole, whole, whole, half</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scale Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9r-hx-C6g">
@@ -257,6 +254,7 @@ whole, whole, half, whole, whole, whole, half</string>
                     <navigationItem key="navigationItem" title="Scale Info" id="Muc-e4-QtQ"/>
                     <connections>
                         <outlet property="scaleImage" destination="XO0-S6-GI7" id="Buy-g9-QhV"/>
+                        <outlet property="scaleText" destination="dKP-YI-Vxj" id="8o6-qB-B6W"/>
                         <outlet property="scaleType" destination="r9r-hx-C6g" id="qzp-k1-neV"/>
                     </connections>
                 </viewController>
