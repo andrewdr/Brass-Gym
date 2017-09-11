@@ -18,12 +18,14 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var osValue: UISwitch!
     @IBOutlet weak var flipSwitch: UISwitch!
     @IBOutlet weak var noteLabel: UILabel!
+    @IBOutlet weak var flexImage: UIImageView!
 
     
     
     
     @IBAction func flexButton(_ sender: Any) {
         getFlexType()
+        getFlexImage()
     }
     
 
@@ -110,6 +112,20 @@ class SecondViewController: UIViewController {
         let randomNumber = Int(arc4random_uniform(UInt32(notes.count)))
         noteLabel.text = notes[randomNumber]
         noteLabel.isHidden = false
+    }
+    
+    func getFlexImage(){
+        if flexDetailLabel.text == oldSchoolFlex[0]{
+            flexImage.image = #imageLiteral(resourceName: "flex-root")
+        }else if flexDetailLabel.text == oldSchoolFlex[1]{
+            flexImage.image = #imageLiteral(resourceName: "flex-3rd")
+        }else if flexDetailLabel.text == oldSchoolFlex[2]{
+            flexImage.image = #imageLiteral(resourceName: "flex-5th")
+        }else if flexDetailLabel.text == oldSchoolFlex[3]{
+            flexImage.image = #imageLiteral(resourceName: "Flex-remmington")
+        }else if flexDetailLabel.text == oldSchoolFlex[4]{
+            flexImage.image = #imageLiteral(resourceName: "flex-slamma")
+        }
     }
     
     
