@@ -383,7 +383,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flex-root" translatesAutoresizingMaskIntoConstraints="NO" id="WSL-15-Gty">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flex-root" translatesAutoresizingMaskIntoConstraints="NO" id="WSL-15-Gty">
                                 <rect key="frame" x="17" y="239" width="343" height="141"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="141" id="0ze-gT-UHv"/>

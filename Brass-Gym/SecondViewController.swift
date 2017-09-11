@@ -26,6 +26,7 @@ class SecondViewController: UIViewController {
     @IBAction func flexButton(_ sender: Any) {
         getFlexType()
         getFlexImage()
+        flexImage.isHidden = false
     }
     
 
