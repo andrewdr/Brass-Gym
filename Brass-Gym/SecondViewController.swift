@@ -20,6 +20,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var flexImage: UIImageView!
 
+
+
     
     
     
