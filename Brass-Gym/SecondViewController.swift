@@ -126,7 +126,10 @@ class SecondViewController: UIViewController {
             flexImage.image = #imageLiteral(resourceName: "flex-remmington")
         }else if flexDetailLabel.text == oldSchoolFlex[4]{
             flexImage.image = #imageLiteral(resourceName: "flex-slamma")
+        }else if flexDetailLabel.text == oldSchoolFlex[5]{
+            flexImage.image = #imageLiteral(resourceName: "FlexFlowUp")
         }
+
     }
     
     
