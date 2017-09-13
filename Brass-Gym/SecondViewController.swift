@@ -130,6 +130,26 @@ class SecondViewController: UIViewController {
             flexImage.image = #imageLiteral(resourceName: "flex-slamma")
         }else if flexDetailLabel.text == oldSchoolFlex[5]{
             flexImage.image = #imageLiteral(resourceName: "FlexFlowUp")
+        }else if flexDetailLabel.text == flips[0]{
+            flexImage.image = #imageLiteral(resourceName: "flips-maj3")
+        }else if flexDetailLabel.text == flips[1]{
+            flexImage.image = #imageLiteral(resourceName: "flips-min3")
+        }else if flexDetailLabel.text == flips[2]{
+            flexImage.image = #imageLiteral(resourceName: "flips-perf4")
+        }else if flexDetailLabel.text == flips[3]{
+            flexImage.image = #imageLiteral(resourceName: "flips-perf4h")
+        }else if flexDetailLabel.text == flips[4]{
+            flexImage.image = #imageLiteral(resourceName: "flips-perf5")
+        }else if flexDetailLabel.text == flips[5]{
+            flexImage.image = #imageLiteral(resourceName: "flips-perf5h")
+        }else if flexDetailLabel.text == flips[6]{
+            flexImage.image = #imageLiteral(resourceName: "flips-maj6")
+        }else if flexDetailLabel.text == flips[7]{
+            flexImage.image = #imageLiteral(resourceName: "flips-min6")
+        }else if flexDetailLabel.text == flips[8]{
+            flexImage.image = #imageLiteral(resourceName: "flips-prime")
+        }else if flexDetailLabel.text == flips[9]{
+            flexImage.image = #imageLiteral(resourceName: "flips-octaveLow")
         }
 
     }
