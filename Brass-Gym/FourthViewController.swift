@@ -58,6 +58,7 @@ class FourthViewController: UIViewController {
             metronome.stop()
             stopText()
         }
+        
     }
     
     func startText(){

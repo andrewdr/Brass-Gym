@@ -18,6 +18,7 @@ class ScaleDetailVC: UIViewController {
     @IBOutlet weak var scaleImage: UIImageView!
     @IBOutlet weak var scaleText: UITextView!
     
+    
     func getScaleImage(){
         
         if receivedScale == majorScales[0]{
