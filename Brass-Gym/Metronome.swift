@@ -21,6 +21,8 @@ class Metronome {
         
         var accentedFile: AVAudioFile?
         var enginePrep: AVAudioEngine?
+        
+        
 
         do{
             let getAccentFile = try AVAudioFile(forReading: accentedClickFile)
@@ -38,7 +40,7 @@ class Metronome {
         audioEngine.connect(audioPlayerNode, to: audioEngine.mainMixerNode, format: audioFileAccentedClick.processingFormat)
 
         do{
-           let getEngine =  try AVAudioEngine(audioEngine.start())
+            let getEngine =  try AVAudioEngine()
            enginePrep = getEngine
             
         }catch{
@@ -63,23 +65,23 @@ class Metronome {
         
         let bufferAccentedClick = AVAudioPCMBuffer(pcmFormat: audioFileAccentedClick.processingFormat, frameCapacity: beatLength)
         do{
-            let getBufferAccent = try AVAudioFile(audioFileAccentedClick.read(into: bufferAccentedClick))
+            let getBufferAccent = try AVAudioFile(forReading: audioFileAccentedClick.read(into: bufferAccentedClick!))
             accentBufferPrep = getBufferAccent
             
         }catch{
             print("An error occurred")
         }
         accentBufferStart = accentBufferPrep
-        bufferAccentedClick.frameLength = beatLength
+        bufferAccentedClick?.frameLength = beatLength
         
         
         
         let bufferBar = AVAudioPCMBuffer(pcmFormat: audioFileAccentedClick.processingFormat, frameCapacity: 4 * beatLength)
-        bufferBar.frameLength = 4 * beatLength
+        bufferBar?.frameLength = 4 * beatLength
         
         // don't forget if we have two or more channels then we have to multiply memory pointee at channels count
         let accentedClickArray = Array(
-            UnsafeBufferPointer(start: bufferAccentedClick.floatChannelData?[0],
+            UnsafeBufferPointer(start: bufferAccentedClick?.floatChannelData?[0],
                                 count:Int(audioFileAccentedClick.processingFormat.channelCount) * Int(beatLength))
         )
         
@@ -92,9 +94,9 @@ class Metronome {
             barArray.append(contentsOf: accentedClickArray)
         }
         
-        bufferBar.floatChannelData?.pointee.assign(from: barArray,
-                                                   count: Int(audioFileAccentedClick.processingFormat.channelCount) * Int(bufferBar.frameLength))
-        return bufferBar
+        bufferBar?.floatChannelData?.pointee.assign(from: barArray,
+                                                    count: Int(audioFileAccentedClick.processingFormat.channelCount) * Int(bufferBar?.frameLength))
+        return bufferBar!
     }
     
     
