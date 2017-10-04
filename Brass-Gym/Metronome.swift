@@ -22,7 +22,9 @@ class Metronome {
         var accentedFile: AVAudioFile?
         var enginePrep: AVAudioEngine?
         
-        
+        enum AccentClickError: Error {
+            case engineFailed
+        }
 
         do{
             let getAccentFile = try AVAudioFile(forReading: accentedClickFile)
@@ -40,9 +42,11 @@ class Metronome {
         audioEngine.connect(audioPlayerNode, to: audioEngine.mainMixerNode, format: audioFileAccentedClick.processingFormat)
 
         do{
-            let getEngine =  try AVAudioEngine()
+            let getEngine = AVAudioEngine()
            enginePrep = getEngine
             
+        }catch AccentClickError.engineFailed{
+            print("Engine Failed To Start")
         }catch{
             print("An error occurred")
         }
