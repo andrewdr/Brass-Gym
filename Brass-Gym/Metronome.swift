@@ -68,6 +68,7 @@ class Metronome {
         
         
         let bufferAccentedClick = AVAudioPCMBuffer(pcmFormat: audioFileAccentedClick.processingFormat, frameCapacity: beatLength)
+        
         do{
             let getBufferAccent = try AVAudioFile(forReading: audioFileAccentedClick.read(into: bufferAccentedClick!))
             accentBufferPrep = getBufferAccent
@@ -99,7 +100,7 @@ class Metronome {
         }
         
         bufferBar?.floatChannelData?.pointee.assign(from: barArray,
-                                                    count: Int(audioFileAccentedClick.processingFormat.channelCount) * Int(bufferBar?.frameLength))
+                                                    count: Int((audioFileAccentedClick.processingFormat.channelCount) * (bufferBar?.frameLength)!))
         return bufferBar!
     }
     
