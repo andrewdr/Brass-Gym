@@ -15,7 +15,7 @@ class Metronome {
     private var audioEngine:AVAudioEngine
     private var engineStart: AVAudioEngine?
     private var mainBufferStart: AVAudioFile?
-    private var accentBufferStart: AVAudioFile?
+    private var accentBufferStart: AVAudioPCMBuffer?
     
     init (accentedClickFile: URL) {
         
@@ -60,26 +60,27 @@ class Metronome {
     private func generateBuffer(bpm: Double) -> AVAudioPCMBuffer {
         
 
-        var accentBufferPrep: AVAudioFile?
+//        var accentBufferPrep: AVAudioFile?
 
         audioFileAccentedClick.framePosition = 0
         
         let beatLength = AVAudioFrameCount(audioFileAccentedClick.processingFormat.sampleRate * 60 / bpm)
-        
-        
         let bufferAccentedClick = AVAudioPCMBuffer(pcmFormat: audioFileAccentedClick.processingFormat, frameCapacity: beatLength)
         
-        do{
-            let getBufferAccent = try AVAudioFile(forReading: audioFileAccentedClick.read(into: bufferAccentedClick!))
-            accentBufferPrep = getBufferAccent
-            
-        }catch{
-            print("An error occurred")
-        }
-        accentBufferStart = accentBufferPrep
+//        do{
+//            let getBufferAccent = try AVAudioFile(forReading: audioFileAccentedClick.read(into: bufferAccentedClick!))
+//            accentBufferPrep = getBufferAccent
+//
+//        }catch{
+//            print("An error occurred")
+//        }
+//
+//        accentBufferStart = accentBufferPrep
+        
+        accentBufferStart = bufferAccentedClick
+        
+        
         bufferAccentedClick?.frameLength = beatLength
-        
-        
         
         let bufferBar = AVAudioPCMBuffer(pcmFormat: audioFileAccentedClick.processingFormat, frameCapacity: 4 * beatLength)
         bufferBar?.frameLength = 4 * beatLength
