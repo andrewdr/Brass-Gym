@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-let notes:[String] = ["A", "A♭", "B", "B♭", "C", "C♯", "D", "D♭", "E", "E♭", "F", "F♯", "G", "G♭"]
+let notes:[String] = ["A", "A♭", "B", "B♭", "C", "D", "D♭", "E", "E♭", "F", "F♯", "G"]
 
 let scaleType:[String] = ["Major", "Natural Minor", "Harmonic Minor", "Melodic Minor", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Lydian Dominant", "Octatonic(W)", "Octatonic(H)", "Chromatic(up)", "Chromatic(down)", "Whole Tone", "Locrian", "Blues"]
 
