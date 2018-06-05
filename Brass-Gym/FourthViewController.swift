@@ -16,7 +16,7 @@ class FourthViewController: UIViewController {
     @IBOutlet weak var startStopBtnTxt: UIButton!
     @IBOutlet weak var tempoSlider: UISlider!
     
-
+/*
     var metTimer: Timer!
     var metIsOff = true
     var metPlayer: AVAudioPlayer!
@@ -101,5 +101,6 @@ class FourthViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+ */
     
     }

@@ -8,6 +8,7 @@
 
 import AVFoundation
 
+/*
 class Metronome {
     
     private var audioPlayerNode:AVAudioPlayerNode
@@ -127,3 +128,4 @@ class Metronome {
     }
     
 }
+*/

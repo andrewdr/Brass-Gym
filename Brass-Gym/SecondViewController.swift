@@ -30,9 +30,6 @@ class SecondViewController: UIViewController {
         getFlexImage()
         
         flexImage.isHidden = false
-        
-        
-        
     }
     
 
