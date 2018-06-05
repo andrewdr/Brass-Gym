@@ -28,7 +28,11 @@ class SecondViewController: UIViewController {
     @IBAction func flexButton(_ sender: Any) {
         getFlexType()
         getFlexImage()
+        
         flexImage.isHidden = false
+        
+        
+        
     }
     
 
@@ -129,7 +133,7 @@ class SecondViewController: UIViewController {
         }else if flexDetailLabel.text == oldSchoolFlex[4]{
             flexImage.image = #imageLiteral(resourceName: "flex-slamma")
         }else if flexDetailLabel.text == oldSchoolFlex[5]{
-            flexImage.image = #imageLiteral(resourceName: "FlexFlowUp")
+            flexImage.isHidden = true
         }else if flexDetailLabel.text == flips[0]{
             flexImage.image = #imageLiteral(resourceName: "flips-maj3")
         }else if flexDetailLabel.text == flips[1]{

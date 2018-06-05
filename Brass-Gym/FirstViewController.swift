@@ -100,7 +100,7 @@ class FirstViewController: UIViewController {
             scaleImage = #imageLiteral(resourceName: "c-major")
         }else{
         
-        flatMapScales = selectedScales.flatMap({$0})
+            flatMapScales = selectedScales.compactMap({$0})
         randomScaleType = Int(arc4random_uniform(UInt32(flatMapScales.count)))
         scaleTypeLabel.text = flatMapScales[randomScaleType]
             
